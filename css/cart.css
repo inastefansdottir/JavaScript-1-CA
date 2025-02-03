@@ -1,0 +1,138 @@
+.cart-main {
+    display: flex;
+    margin: 50px auto;
+    gap: 100px;
+}
+
+/* grid-area */
+.product {grid-area: product;}
+.price-header {grid-area: price-header;}
+.quantity {grid-area: quantity;}
+.total {grid-area: total;}
+
+.product-image {grid-area: image;}
+.title {grid-area: title;}
+.price {grid-area: price;}
+.counter {grid-area: counter;}
+.total-price {grid-area: total-price;}
+.ex {grid-area: ex;}
+
+/* CSS Grids grid template */
+.order-list {
+    display: grid;
+    grid-template-columns: 120px 200px 35px 150px 50px 60px;
+    grid-template-rows: 15px 1px 100px 1px;
+    gap: 5px;
+    grid-template-areas: 
+        "product . price-header quantity total ."
+        ". . . . . ."
+        "image title price counter total-price ex"
+        ". . . . . .";
+}
+
+/* CSS Grids content */
+.text-style {
+    font-size: 0.7em;
+    font-weight: 300;
+    color: rgba(225, 225, 225, 0.8);
+}
+
+.line-seperator {
+    position: relative;
+    grid-column: 1 / -1; /* spans all columns */
+    border-bottom: 1px solid rgba(225, 225, 225, 0.5);
+}
+
+.product-image {
+    width: 100px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.center-align {
+    align-self: center;
+}
+
+.bold-text-style {
+    font-weight: 400;
+}
+
+.counter {
+    padding: 5px 10px;
+    border-radius: 30px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin: 0px auto;
+}
+
+.fa-plus,
+.fa-minus {
+    font-size: 12px;
+}
+
+.quantity,
+.ex {
+    text-align: center;
+}
+
+.ex {
+    width: 30px;
+    height: 30px;
+    align-content: center;
+    border-radius: 50%;
+    justify-self: end;
+    font-size: 12px;
+}
+
+.ex:hover {
+    background-color: #801889;
+    border-color: #801889;
+}
+
+.ex:active {
+    background-color: #db21cc;
+    border-color: #db21cc;
+}
+
+.counter,
+.ex,
+.order-summary {
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.3)0%, rgba(255, 255, 255, 0.03) 100%);
+    border: 0.3px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Order Summary content */
+.order-summary {
+    display: flex;
+    width: 440px;
+    flex-direction: column;
+    padding: 30px;
+    gap: 35px;
+    border-radius: 30px;
+}
+
+.order-summary h1 {
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+.order-summary_text {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9em;
+    font-weight: 400;
+}
+
+.faded-text {
+    color: rgba(225, 225, 225, 0.5);
+}
+
+.bigger-text {
+    font-size: 1.2em;
+}
+
+.width-100 {
+    width: 100%;
+}

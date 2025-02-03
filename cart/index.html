@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameHub | Cart</title>
+    <meta name="description" content="View and manage the games in your GameHub cart. Ready to checkout? Complete your purchase and start playing your new games today.">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/global-media.css">
+    <link rel="stylesheet" href="../css/cart.css">
+    <link rel="stylesheet" href="../css/cart-media.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header> 
+        <div class="menu">
+
+            <input type="checkbox" id="menu-checkbox">
+            <label for="menu-checkbox" class="hamburger-icon" aria-label="Open menu">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+            
+            <div class="navigation">
+                <a href="../index.html" class="logo">
+                    <img src="../assets/images/gamehub-logo.png" alt="Gamehub Logo">
+                </a>
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="../">Home</a></li>
+                        <li><a href="../games/">Games</a></li>
+                        <li><a href="../about/">About us</a></li>
+                        <li><a href="../contact/">Contact us</a></li>
+                    </ul>
+                </nav>
+                <div class="search-icons-section">
+                    <input type="search" placeholder="Search" id="search" name="search" aria-label="Search for games">
+                    <a href="../log-in/" aria-label="User account login">
+                        <i class="header-icon fa-solid fa-user" aria-hidden="true"></i>
+                    </a>
+                    <a href="../cart/" aria-label="View shopping cart">
+                        <i class="header-icon fa-solid fa-cart-shopping" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+
+            <a href="../index.html" class="logo-mobile">
+                <img  src="../assets/images/gamehub-logo.png" alt="Gamehub Logo">
+            </a>
+            <div class="icon-mobile-section">
+                <a href="../log-in/" class="icon-mobile" aria-label="User account login">
+                    <i class="header-icon fa-solid fa-user" aria-hidden="true"></i>
+                </a>
+                <a href="../cart/" class="icon-mobile" aria-label="View shopping cart">
+                    <i class="header-icon fa-solid fa-cart-shopping" aria-hidden="true"></i>
+                </a>
+            </div>
+
+        </div>
+    </header>
+
+    <main class="cart-main">
+        <div class="order-list">
+            <p class="product text-style">GAME</p>
+            <p class="price-header text-style">PRICE</p>
+            <p class="quantity text-style">QUANTITY</p>
+            <p class="total text-style">TOTAL</p>
+
+            <div class="line-seperator"></div>
+
+            <img class="product-image center-align" src="../assets/images/GameHub_covers5.jpg" alt="Cover art of the video game 'Assassin' featuring a ninja mascot">
+            <p class="bold-text-style title center-align">Title of Game</p>
+            <p class="bold-text-style price center-align">$60</p>
+
+            <div class="counter center-align">
+                <i class="fa-solid fa-minus"></i>
+                <p class="bold-text-style">1</p>
+                <i class="fa-solid fa-plus"></i>
+            </div>
+
+            <p class="bold-text-style total-price center-align">$60</p>
+
+            <div class="ex center-align">
+                <i class="fa-solid fa-x"></i>
+            </div>
+
+            <div class="line-seperator"></div>
+        </div>
+
+        <section class="order-summary_section">
+            <div class="order-summary">
+                <h1>Order Summary</h1>
+
+                <hr> <!-- Horizontal line -->
+
+                <div class="order-summary_text">
+                    <p class="faded-text">Subtotal</p>
+                    <p>$60</p>
+                </div>
+                
+                <div class="order-summary_text">
+                    <p class="faded-text">Shipping</p>
+                    <p>Free</p>
+                </div>
+
+                <hr> <!-- Horizontal line -->
+
+                <div class="order-summary_text bigger-text">
+                    <p>Total</p>
+                    <p>$60</p>
+                </div>
+                <a href="../cart/checkout.html" class="button width-100">Checkout</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p class="copyright">&copy; 2024 Gamehub | All Rights Reserved</p>
+        <div class="social-media">
+            <i class="social-media_icon fa-brands fa-reddit-alien"></i>
+            <i class="social-media_icon fa-brands fa-instagram"></i>
+            <i class="social-media_icon fa-brands fa-twitter"></i>
+        </div>
+    </footer>
+</body>
+
+</html>
