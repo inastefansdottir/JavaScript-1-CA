@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameHub | Cart | Checkout</title>
+    <meta name="description" content="Securely complete your GameHub purchase. Review your order, choose your payment method, and get ready to enjoy your new games.">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/global-media.css">
+    <link rel="stylesheet" href="../css/checkout.css">
+    <link rel="stylesheet" href="../css/checkout-media.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header> 
+        <div class="menu">
+
+            <input type="checkbox" id="menu-checkbox">
+            <label for="menu-checkbox" class="hamburger-icon" aria-label="Open menu">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+            
+            <div class="navigation">
+                <a href="../index.html" class="logo">
+                    <img src="../assets/images/gamehub-logo.png" alt="Gamehub Logo">
+                </a>
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="../">Home</a></li>
+                        <li><a href="../games/">Games</a></li>
+                        <li><a href="../about/">About us</a></li>
+                        <li><a href="../contact/">Contact us</a></li>
+                    </ul>
+                </nav>
+                <div class="search-icons-section">
+                    <input type="search" placeholder="Search" id="search" name="search" aria-label="Search for games">
+                    <a href="../log-in/" aria-label="User account login">
+                        <i class="header-icon fa-solid fa-user" aria-hidden="true"></i>
+                    </a>
+                    <a href="../cart/" aria-label="View shopping cart">
+                        <i class="header-icon fa-solid fa-cart-shopping" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+
+            <a href="../index.html" class="logo-mobile">
+                <img  src="../assets/images/gamehub-logo.png" alt="Gamehub Logo">
+            </a>
+            <div class="icon-mobile-section">
+                <a href="../log-in/" class="icon-mobile" aria-label="User account login">
+                    <i class="header-icon fa-solid fa-user" aria-hidden="true"></i>
+                </a>
+                <a href="../cart/" class="icon-mobile" aria-label="View shopping cart">
+                    <i class="header-icon fa-solid fa-cart-shopping" aria-hidden="true"></i>
+                </a>
+            </div>
+
+        </div>
+    </header>
+
+    <main class="main-checkout">
+        <h1>Shipping Address & Payment</h1>
+        <form action="payment-successful.html" class="container-divider">
+            <div class="type-area-section">
+                <section class="flexbox-styling">
+                    <h2>Customer Info</h2>
+                    <label for="first-name">First Name</label>
+                    <input class="type-area-styling" type="text" id="first-name" name="first-name" >
+
+                    <label for="last-name">Last Name</label>
+                    <input class="type-area-styling" type="text" id="last-name" name="last-name" >
+
+                    <label for="phone">Phone (optional)</label>
+                    <input class="type-area-styling" type="tel" id="phone" name="phone">
+
+                    <label for="email">Email</label>
+                    <input class="type-area-styling" type="email" id="email" name="email" >
+
+                    <h2>Shipping Address</h2>
+                    <label for="country">Country</label>
+                    <input class="type-area-styling" type="text" id="country" name="country" >
+                            
+                    <label for="city">City</label>
+                    <input class="type-area-styling" type="text" id="city" name="city" >
+
+                    <label for="street-address">Street Address</label>
+                    <input class="type-area-styling" type="text" id="street-address" name="street-address">
+
+                    <label for="zip-code">Zip Code</label>
+                    <input class="type-area-styling" type="text" id="zip-code" name="zip-code">
+                </section>
+
+                <section class="flexbox-styling">
+                    <h2>Payment</h2>
+                    <label for="card-number">Card Number</label>
+                    <input 
+                        class="type-area-styling" 
+                        type="text" 
+                        id="card-number" 
+                        name="card-number"
+                        inputmode="numeric"
+                        pattern="[0-9]{13,19}" 
+                        maxlength="19"
+                        placeholder="0000 0000 0000 0000"
+                        title="enter a 16-digit card number without spaces"
+                        autocomplete="cc-number">
+
+                    <label for="card-name">Cardholder Name</label>
+                    <input class="type-area-styling" type="text" id="card-name" name="card-name" >
+
+                    <label for="expiry-date">Expiry Date (MM/YY)</label>
+                    <input 
+                        class="type-area-styling" 
+                        type="text" 
+                        id="expiry-date" 
+                        name="expiry-date"
+                        inputmode="numeric"
+                        pattern="(0[1-9]|1[0-2])\/?([0-9]{2})"
+                        placeholder="MM/YY"
+                        maxlength="5">
+
+                    <label for="cvc">CVC</label>
+                    <input 
+                        class="type-area-styling" 
+                        type="text"
+                        id="cvc"
+                        name="cvc"
+                        inputmode="numeric"
+                        pattern="[0-9]{3,4}"
+                        maxlength="4">
+                </section>
+            </div>
+
+            <div class="flexbox-styling width-space">
+                <section class="order-list">
+                    <p class="purchase">Your Purchases</p>
+
+                    <div class="line-seperator"></div>
+
+                    <img class="product-image center-align" src="../assets/images/GameHub_covers5.jpg" alt="Cover art of the video game 'Assassin' featuring a ninja mascot">
+                    <p class="bold-text-style title center-align">Title of Game</p>
+                    <p class="bold-text-style quantity center-align">1x</p>
+                    <p class="bold-text-style total-price center-align">$60</p>
+
+                    <div class="ex center-align">
+                        <i class="fa-solid fa-x"></i>
+                    </div>
+
+                    <div class="line-seperator"></div>
+                </section>
+
+                <section class="order-summary_section">
+                    <div class="order-summary"> <!-- needed for styling -->
+                        <h3>Order Summary</h3>
+                        <hr>
+
+                        <div class="order-summary_text">
+                            <p class="faded-text">Subtotal</p>
+                            <p>$60</p>
+                        </div>
+
+                        <div class="order-summary_text">
+                            <p class="faded-text">Shipping</p>
+                            <p>Free</p>
+                        </div>
+
+                        <hr>
+
+                        <div class="order-summary_text bigger-text">
+                            <p>Total</p>
+                            <p>$60</p>
+                        </div>
+
+                        <button type="submit" class="button button-width">Checkout</button>
+                    </div>
+                </section>
+            </div>
+        </form>
+    </main>
+
+    <footer>
+        <p class="copyright">&copy; 2024 Gamehub | All Rights Reserved</p>
+        <div class="social-media">
+            <i class="social-media_icon fa-brands fa-reddit-alien"></i>
+            <i class="social-media_icon fa-brands fa-instagram"></i>
+            <i class="social-media_icon fa-brands fa-twitter"></i>
+        </div>
+    </footer>
+</body>
+    
+</html>
