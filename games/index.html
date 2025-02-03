@@ -1,262 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GameHub | Games</title>
-    <meta name="description" content="Explore GameHub's huge collection of video games across genres, including action, RPG, strategy, and more. Find the perfect game for any device and start your next adventure today.">
-    <link rel="stylesheet" href="../css/global.css">
-    <link rel="stylesheet" href="../css/global-media.css">
-    <link rel="stylesheet" href="../css/games.css">
-    <link rel="stylesheet" href="../css/games-media.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
+    <meta
+      name="description"
+      content="Explore GameHub's huge collection of video games across genres, including action, RPG, strategy, and more. Find the perfect game for any device and start your next adventure today."
+    />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/global-media.css" />
+    <link rel="stylesheet" href="../css/games.css" />
+    <link rel="stylesheet" href="../css/games-media.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <script defer src="../js/games.js"></script>
+  </head>
 
-<body>
-    <header> 
-        <div class="menu">
+  <body>
+    <header>
+      <div class="menu">
+        <input type="checkbox" id="menu-checkbox" />
+        <label
+          for="menu-checkbox"
+          class="hamburger-icon"
+          aria-label="Open menu"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </label>
 
-            <input type="checkbox" id="menu-checkbox">
-            <label for="menu-checkbox" class="hamburger-icon" aria-label="Open menu">
-                <i class="fa-solid fa-bars"></i>
-            </label>
-            
-            <div class="navigation">
-                <a href="../index.html" class="logo">
-                    <img src="../assets/images/gamehub-logo.png" alt="Gamehub Logo">
-                </a>
-                <nav>
-                    <ul class="nav-links">
-                        <li><a href="../">Home</a></li>
-                        <li><a href="../games/" class="current">Games</a></li>
-                        <li><a href="../about/">About us</a></li>
-                        <li><a href="../contact/">Contact us</a></li>
-                    </ul>
-                </nav>
-                <div class="search-icons-section">
-                    <input type="search" placeholder="Search" id="search" name="search" aria-label="Search for games">
-                    <a href="../log-in/" aria-label="User account login">
-                        <i class="header-icon fa-solid fa-user" aria-hidden="true"></i>
-                    </a>
-                    <a href="../cart/" aria-label="View shopping cart">
-                        <i class="header-icon fa-solid fa-cart-shopping" aria-hidden="true"></i>
-                    </a>
-                </div>
-            </div>
-
-            <a href="../index.html" class="logo-mobile">
-                <img  src="../assets/images/gamehub-logo.png" alt="Gamehub Logo">
+        <div class="navigation">
+          <a href="../index.html" class="logo">
+            <img src="../assets/images/gamehub-logo.png" alt="Gamehub Logo" />
+          </a>
+          <nav>
+            <ul class="nav-links">
+              <li><a href="../">Home</a></li>
+              <li><a href="../games/" class="current">Games</a></li>
+              <li><a href="../about/">About us</a></li>
+              <li><a href="../contact/">Contact us</a></li>
+            </ul>
+          </nav>
+          <div class="search-icons-section">
+            <input
+              type="search"
+              placeholder="Search"
+              id="search"
+              name="search"
+              aria-label="Search for games"
+            />
+            <a href="../log-in/" aria-label="User account login">
+              <i class="header-icon fa-solid fa-user" aria-hidden="true"></i>
             </a>
-            <div class="icon-mobile-section">
-                <a href="../log-in/" class="icon-mobile" aria-label="User account login">
-                    <i class="header-icon fa-solid fa-user" aria-hidden="true"></i>
-                </a>
-                <a href="../cart/" class="icon-mobile" aria-label="View shopping cart">
-                    <i class="header-icon fa-solid fa-cart-shopping" aria-hidden="true"></i>
-                </a>
-            </div>
-
+            <a href="../cart/" aria-label="View shopping cart">
+              <i
+                class="header-icon fa-solid fa-cart-shopping"
+                aria-hidden="true"
+              ></i>
+            </a>
+          </div>
         </div>
+
+        <a href="../index.html" class="logo-mobile">
+          <img src="../assets/images/gamehub-logo.png" alt="Gamehub Logo" />
+        </a>
+        <div class="icon-mobile-section">
+          <a
+            href="../log-in/"
+            class="icon-mobile"
+            aria-label="User account login"
+          >
+            <i class="header-icon fa-solid fa-user" aria-hidden="true"></i>
+          </a>
+          <a
+            href="../cart/"
+            class="icon-mobile"
+            aria-label="View shopping cart"
+          >
+            <i
+              class="header-icon fa-solid fa-cart-shopping"
+              aria-hidden="true"
+            ></i>
+          </a>
+        </div>
+      </div>
     </header>
 
     <main class="games-main">
-        <h1>Games</h1>
-        <section class="product-list">
-            <div class="products">
-                <a class="game-cover" href="specific-game.html">
-                    <img src="../assets/images/GameHub_covers5.jpg" alt="Picture of the video game Assassin">
-                </a>
-                <h2>Assasin</h2>
-                <p>$60</p>
-                <a href="../cart/" class="button small-button">Add to cart</a>
-            </div>
-
-            <div class="products">
-                <a class="game-cover" href="specific-game.html">
-                    <img src="../assets/images/GameHub_covers3.jpg" alt="Picture of the video game Black">
-                </a>
-                <h2>Black</h2>
-                <p>$60</p>
-                <a href="../cart/" class="button small-button">Add to cart</a>
-            </div>
-
-            <div class="products">
-                <a class="game-cover" href="specific-game.html">
-                    <img src="../assets/images/GameHub_covers8.jpg" alt="Picture of the video game Boxer">
-                </a>
-                <h2>Boxer</h2>
-                <p>$60</p>
-                <a href="../cart/" class="button small-button">Add to cart</a>
-            </div>
-
-            <div class="products">
-                <a class="game-cover" href="specific-game.html">
-                    <img src="../assets/images/GameHub_covers9.jpg" alt="Picture of the video game Cyberpunk">
-                </a>
-                <h2>Cyberpunk</h2>
-                <p>$60</p>
-                <a href="../cart/" class="button small-button">Add to cart</a>
-            </div>
-
-            <div class="products">
-                <a class="game-cover" href="specific-game.html">
-                    <img src="../assets/images/GameHub_covers4.jpg" alt="Picture of the video game Furious">
-                </a>
-                <h2>Furious</h2>
-                <p>$60</p>
-                <a href="../cart/" class="button small-button">Add to cart</a>
-            </div>
-
-            <div class="products">
-                <a class="game-cover" href="specific-game.html">
-                    <img src="../assets/images/GameHub_covers10.jpg" alt="Picture of the video game Forge Legend">
-                </a>
-                <h2>Forge Legend</h2>
-                <p>$60</p>
-                <a href="../cart/" class="button small-button">Add to cart</a>
-            </div>
-
-            <div class="products">
-                <a class="game-cover" href="specific-game.html">
-                    <img src="../assets/images/GameHub_covers7.jpg" alt="Picture of the video game Racing">
-                </a>
-                <h2>Racing</h2>
-                <p>$60</p>
-                <a href="../cart/" class="button small-button">Add to cart</a>
-            </div>
-            
-            <div class="products">
-                <a class="game-cover" href="specific-game.html">
-                    <img src="../assets/images/GameHub_covers2.jpg" alt="Picture of the video game Super Duper">
-                </a>
-                <h2>Super Duper</h2>
-                <p>$60</p>
-                <a href="../cart/" class="button small-button">Add to cart</a>
-            </div>
-
-            <div class="products">
-                <a class="game-cover" href="specific-game.html">
-                    <img src="../assets/images/GameHub_covers6.jpg" alt="Picture of the video game Space War">
-                </a>
-                <h2>Space War</h2>
-                <p>$60</p>
-                <a href="../cart/" class="button small-button">Add to cart</a>
-            </div>
-
-            <div class="products">
-                <a class="game-cover" href="specific-game.html">
-                    <img src="../assets/images/GameHub_covers.jpg" alt="Picture of the video game Ping Pong">
-                </a>
-                <h2>Ping Pong</h2>
-                <p>$60</p>
-                <a href="../cart/" class="button small-button">Add to cart</a>
-            </div>
-
-
-             <div class="products">
-                <a class="game-cover" href="specific-game.html">
-                    <img src="../assets/images/GameHub_covers5.jpg" alt="Picture of the video game Assassin">
-                </a>
-                <h2>Assasin</h2>
-                <p>$60</p>
-                <a href="../cart/" class="button small-button">Add to cart</a>
-            </div>
-
-            <div class="products">
-                <a class="game-cover" href="specific-game.html">
-                    <img src="../assets/images/GameHub_covers3.jpg" alt="Picture of the video game Black">
-                </a>
-                <h2>Black</h2>
-                <p>$60</p>
-                <a href="../cart/" class="button small-button">Add to cart</a>
-            </div>
-
-            <div class="products">
-                <a class="game-cover" href="specific-game.html">
-                    <img src="../assets/images/GameHub_covers8.jpg" alt="Picture of the video game Boxer">
-                </a>
-                <h2>Boxer</h2>
-                <p>$60</p>
-                <a href="../cart/" class="button small-button">Add to cart</a>
-            </div>
-
-            <div class="products">
-                <a class="game-cover" href="specific-game.html">
-                    <img src="../assets/images/GameHub_covers9.jpg" alt="Picture of the video game Cyberpunk">
-                </a>
-                <h2>Cyberpunk</h2>
-                <p>$60</p>
-                <a href="../cart/" class="button small-button">Add to cart</a>
-            </div>
-
-            <div class="products">
-                <a class="game-cover" href="specific-game.html">
-                    <img src="../assets/images/GameHub_covers4.jpg" alt="Picture of the video game Furious">
-                </a>
-                <h2>Furious</h2>
-                <p>$60</p>
-                <a href="../cart/" class="button small-button">Add to cart</a>
-            </div>
-
-            <div class="products">
-                <a class="game-cover" href="specific-game.html">
-                    <img src="../assets/images/GameHub_covers10.jpg" alt="Picture of the video game Forge Legend">
-                </a>
-                <h2>Forge Legend</h2>
-                <p>$60</p>
-                <a href="../cart/" class="button small-button">Add to cart</a>
-            </div>
-
-            <div class="products">
-                <a class="game-cover" href="specific-game.html">
-                    <img src="../assets/images/GameHub_covers7.jpg" alt="Picture of the video game Racing">
-                </a>
-                <h2>Racing</h2>
-                <p>$60</p>
-                <a href="../cart/" class="button small-button">Add to cart</a>
-            </div>
-            
-            <div class="products">
-                <a class="game-cover" href="specific-game.html">
-                    <img src="../assets/images/GameHub_covers2.jpg" alt="Picture of the video game Super Duper">
-                </a>
-                <h2>Super Duper</h2>
-                <p>$60</p>
-                <a href="../cart/" class="button small-button">Add to cart</a>
-            </div>
-
-            <div class="products">
-                <a class="game-cover" href="specific-game.html">
-                    <img src="../assets/images/GameHub_covers6.jpg" alt="Picture of the video game Space War">
-                </a>
-                <h2>Space War</h2>
-                <p>$60</p>
-                <a href="../cart/" class="button small-button">Add to cart</a>
-            </div>
-
-            <div class="products">
-                <a class="game-cover" href="specific-game.html">
-                    <img src="../assets/images/GameHub_covers.jpg" alt="Picture of the video game Ping Pong">
-                </a>
-                <h2>Ping Pong</h2>
-                <p>$60</p>
-                <a href="../cart/" class="button small-button">Add to cart</a>
-            </div>
-        </section>
+      <h1>Games</h1>
+      <section class="product-list"></section>
     </main>
 
     <footer>
-        <p class="copyright">&copy; 2024 Gamehub | All Rights Reserved</p>
-        <div class="social-media">
-            <i class="social-media_icon fa-brands fa-reddit-alien"></i>
-            <i class="social-media_icon fa-brands fa-instagram"></i>
-            <i class="social-media_icon fa-brands fa-twitter"></i>
-        </div>
+      <p class="copyright">&copy; 2024 Gamehub | All Rights Reserved</p>
+      <div class="social-media">
+        <i class="social-media_icon fa-brands fa-reddit-alien"></i>
+        <i class="social-media_icon fa-brands fa-instagram"></i>
+        <i class="social-media_icon fa-brands fa-twitter"></i>
+      </div>
     </footer>
-</body>
-
+  </body>
 </html>
