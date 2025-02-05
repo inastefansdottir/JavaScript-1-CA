@@ -1,16 +1,10 @@
-const apiUrl = "https://v2.api.noroff.dev/gamehub";
+import { fetchAllGames } from "./api.js";
 
-fetch(apiUrl)
-  .then((response) => {
-    if (!response.ok) {
-      // Check if the response is ok (status 200)
-      throw new Error("Network response was not ok");
-    }
-    return response.json(); // Parse JSON from the reponse
-  })
+fetchAllGames()
   .then((data) => {
-    console.log(data);
     const productList = document.querySelector(".product-list"); // The container for the games
+    productList.innerHTML = ""; // Clear any existing content
+
     data.data.forEach((game) => {
       const productDiv = document.createElement("div");
       productDiv.classList.add("products");
@@ -34,16 +28,15 @@ fetch(apiUrl)
       addToCartButton.href = "../cart/";
       addToCartButton.textContent = "Add to cart";
 
+      // Append elements to the product card
       gameCover.appendChild(gameImage);
-
       productDiv.appendChild(gameCover);
       productDiv.appendChild(gameTitle);
       productDiv.appendChild(gamePrice);
       productDiv.appendChild(addToCartButton);
 
-      productList.appendChild(productDiv); // appends each game to the list
-
-      console.log(game.image.url);
+      // Append product card to the product list
+      productList.appendChild(productDiv);
     });
   })
   .catch((error) => {

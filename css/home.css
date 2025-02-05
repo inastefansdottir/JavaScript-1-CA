@@ -17,7 +17,7 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5); /* 50% black */
   z-index: 1;
-} 
+}
 
 .hero-text {
   display: flex; /* flexbox */
@@ -51,22 +51,65 @@
   font-size: 2rem;
 }
 
-.best-sellers_games img {
-  width: 16vw; /* image width scales based on the viewport width */
-  height: 16vw; /* height matches width to maintain the square shape */
-  object-fit: cover; /* crops the image to the size */
-  border-radius: 7%;
+.best-sellers_games {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
 }
 
-.best-sellers_games {
+.game-card {
+  position: relative;
+  overflow: hidden;
+  height: 400px;
+  width: 400px;
+  border-radius: 20px;
+  transition: transform 0.3s ease;
+}
+
+.game-card:hover {
+  transform: scale(1.05); /* Smooth hover zoom effect */
+}
+
+.game-card_image {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+/* Hover effect container */
+.game-card_hover {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7); /* Semi-transparent dark overlay */
+  color: white;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  text-align: center;
+  opacity: 0; /* Hidden by default */
+  pointer-events: none; /* Prevent hover content from blocking the link */
+  transition: opacity 0.3s ease;
+}
+
+.game-card:hover .game-card_hover {
+  opacity: 1; /* Show hover content on hover */
+  pointer-events: auto; /* Allow interaction */
+}
+
+.game-card_hover h3,
+.game-card_hover p {
+  margin: 5px 0;
 }
 
 /* newsletter section */
 .newsletter-section {
-  background: linear-gradient(45deg, rgba(255, 255, 255, 0.3)0%, rgba(255, 255, 255, 0.03) 100%); /* "45deg": angle for the gradient, (255, 255, 255, 0.3): 30% white "0%" starts on one end "100%" ends in the other */
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.3) 0%,
+    rgba(255, 255, 255, 0.03) 100%
+  ); /* "45deg": angle for the gradient, (255, 255, 255, 0.3): 30% white "0%" starts on one end "100%" ends in the other */
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -91,7 +134,6 @@
   margin: 30px 0px;
   gap: 10px;
 }
-
 
 #email {
   width: 400px;

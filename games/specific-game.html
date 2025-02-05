@@ -1,157 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GameHub | Games | Game Title</title>
-    <meta name="description" content="Purchase [Game Title] on GameHub. Dive into [game genre]. Available for PC, PlayStation and Xbox.">
-    <link rel="stylesheet" href="../css/global.css">
-    <link rel="stylesheet" href="../css/global-media.css">
-    <link rel="stylesheet" href="../css/games.css">
-    <link rel="stylesheet" href="../css/games-media.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
+    <meta
+      name="description"
+      content="Purchase [Game Title] on GameHub. Dive into [game genre]. Available for PC, PlayStation and Xbox."
+    />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/global-media.css" />
+    <link rel="stylesheet" href="../css/games.css" />
+    <link rel="stylesheet" href="../css/games-media.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <script defer type="module" src="../js/specific-game.js"></script>
+  </head>
 
-<body>
-    <header> 
-        <div class="menu">
+  <body>
+    <header>
+      <div class="menu">
+        <input type="checkbox" id="menu-checkbox" />
+        <label
+          for="menu-checkbox"
+          class="hamburger-icon"
+          aria-label="Open menu"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </label>
 
-            <input type="checkbox" id="menu-checkbox">
-            <label for="menu-checkbox" class="hamburger-icon" aria-label="Open menu">
-                <i class="fa-solid fa-bars"></i>
-            </label>
-            
-            <div class="navigation">
-                <a href="../index.html" class="logo">
-                    <img src="../assets/images/gamehub-logo.png" alt="Gamehub Logo">
-                </a>
-                <nav>
-                    <ul class="nav-links">
-                        <li><a href="../">Home</a></li>
-                        <li><a href="../games/">Games</a></li>
-                        <li><a href="../about/">About us</a></li>
-                        <li><a href="../contact/">Contact us</a></li>
-                    </ul>
-                </nav>
-                <div class="search-icons-section">
-                    <input type="search" placeholder="Search" id="search" name="search" aria-label="Search for games">
-                    <a href="../log-in/" aria-label="User account login">
-                        <i class="header-icon fa-solid fa-user" aria-hidden="true"></i>
-                    </a>
-                    <a href="../cart/" aria-label="View shopping cart">
-                        <i class="header-icon fa-solid fa-cart-shopping" aria-hidden="true"></i>
-                    </a>
-                </div>
-            </div>
-
-            <a href="../index.html" class="logo-mobile">
-                <img  src="../assets/images/gamehub-logo.png" alt="Gamehub Logo">
+        <div class="navigation">
+          <a href="../index.html" class="logo">
+            <img src="../assets/images/gamehub-logo.png" alt="Gamehub Logo" />
+          </a>
+          <nav>
+            <ul class="nav-links">
+              <li><a href="../">Home</a></li>
+              <li><a href="../games/">Games</a></li>
+              <li><a href="../about/">About us</a></li>
+              <li><a href="../contact/">Contact us</a></li>
+            </ul>
+          </nav>
+          <div class="search-icons-section">
+            <input
+              type="search"
+              placeholder="Search"
+              id="search"
+              name="search"
+              aria-label="Search for games"
+            />
+            <a href="../log-in/" aria-label="User account login">
+              <i class="header-icon fa-solid fa-user" aria-hidden="true"></i>
             </a>
-            <div class="icon-mobile-section">
-                <a href="../log-in/" class="icon-mobile" aria-label="User account login">
-                    <i class="header-icon fa-solid fa-user" aria-hidden="true"></i>
-                </a>
-                <a href="../cart/" class="icon-mobile" aria-label="View shopping cart">
-                    <i class="header-icon fa-solid fa-cart-shopping" aria-hidden="true"></i>
-                </a>
-            </div>
-
+            <a href="../cart/" aria-label="View shopping cart">
+              <i
+                class="header-icon fa-solid fa-cart-shopping"
+                aria-hidden="true"
+              ></i>
+            </a>
+          </div>
         </div>
+
+        <a href="../index.html" class="logo-mobile">
+          <img src="../assets/images/gamehub-logo.png" alt="Gamehub Logo" />
+        </a>
+        <div class="icon-mobile-section">
+          <a
+            href="../log-in/"
+            class="icon-mobile"
+            aria-label="User account login"
+          >
+            <i class="header-icon fa-solid fa-user" aria-hidden="true"></i>
+          </a>
+          <a
+            href="../cart/"
+            class="icon-mobile"
+            aria-label="View shopping cart"
+          >
+            <i
+              class="header-icon fa-solid fa-cart-shopping"
+              aria-hidden="true"
+            ></i>
+          </a>
+        </div>
+      </div>
     </header>
 
     <main class="specififc-game-main">
-        <fieldset>
-            <legend>Select an image preview</legend>
-            <div class="thumbnail-section">
-                <label for="radio1">
-                    <img class="thumbnail" src="../assets/images/GameHub_covers5.jpg" alt="Preview cover art of the video game 'Assassin' featuring a ninja mascot">
-                </label>
+      <fieldset>
+        <legend>Select an image preview</legend>
+        <div class="thumbnail-section">
+          <label for="radio1">
+            <img id="coverImagePreview" class="thumbnail" src="" alt="" />
+          </label>
 
-                <label for="radio2">
-                    <img class="thumbnail" src="../assets/images/gameplay-pic-1.jpg" alt="Preview screenshot of gameplay from 'Assassin' showing an action sequence">
-                </label>
+          <label for="radio2">
+            <img
+              class="thumbnail"
+              src="../assets/images/gameplay-pic-1.jpg"
+              alt="Preview screenshot of gameplay from 'Assassin' showing an action sequence"
+            />
+          </label>
 
-                <label for="radio3">
-                    <img class="thumbnail" src="../assets/images/gameplay-pic-2.jpg" alt="Preview screenshot of gameplay from 'Assassin' featuring character customization options">
-                </label>
-            </div>
-        </fieldset>
+          <label for="radio3">
+            <img
+              class="thumbnail"
+              src="../assets/images/gameplay-pic-2.jpg"
+              alt="Preview screenshot of gameplay from 'Assassin' featuring character customization options"
+            />
+          </label>
+        </div>
+      </fieldset>
 
+      <div class="slideshow-section">
+        <!-- radio buttons for slides -->
+        <input
+          type="radio"
+          name="radio-btn"
+          id="radio1"
+          checked
+          aria-label="Slide 1"
+        />
+        <input type="radio" name="radio-btn" id="radio2" aria-label="Slide 2" />
+        <input type="radio" name="radio-btn" id="radio3" aria-label="Slide 3" />
 
-        <div class="slideshow-section">
-            <!-- radio buttons for slides -->
-            <input type="radio" name="radio-btn" id="radio1" checked aria-label="Slide 1">
-            <input type="radio" name="radio-btn" id="radio2" aria-label="Slide 2">
-            <input type="radio" name="radio-btn" id="radio3" aria-label="Slide 3">
-
-             <!-- images -->
-            <div class="slideshow first">
-                <img class="slides" src="../assets/images/GameHub_covers5.jpg" alt="Cover art of the video game 'Assassin' featuring a ninja mascot">
-            </div>
-
-            <div class="slideshow">
-                <img class="slides" src="../assets/images/gameplay-pic-1.jpg" alt="Screenshot of gameplay from 'Assassin' showing an action sequence">
-            </div>
-
-            <div class="slideshow">
-                <img class="slides" src="../assets/images/gameplay-pic-2.jpg" alt="Screenshot of gameplay from 'Assassin' featuring character customization options">
-            </div>
-
-              <!-- arrow buttons (labels) -->
-            <label for="radio2" class="next next1" tabindex="0" role="button" aria-label="Next slide"><i class="fa-solid fa-chevron-right"></i></label>
-            <label for="radio3" class="prev prev1" tabindex="0" role="button" aria-label="Previous slide"><i class="fa-solid fa-chevron-left"></i></label>
-
-            <label for="radio3" class="next next2" tabindex="0" role="button" aria-label="Next slide"><i class="fa-solid fa-chevron-right"></i></label>
-            <label for="radio1" class="prev prev2" tabindex="0" role="button" aria-label="Previous slide"><i class="fa-solid fa-chevron-left"></i></label>
-
-            <label for="radio1" class="next next3" tabindex="0" role="button" aria-label="Next slide"><i class="fa-solid fa-chevron-right"></i></label>
-            <label for="radio2" class="prev prev3" tabindex="0" role="button" aria-label="Previous slide"><i class="fa-solid fa-chevron-left"></i></label>
+        <!-- images -->
+        <div class="slideshow first">
+          <img id="coverImage" class="slides" src="" alt="" />
         </div>
 
-        <section class="text-section">
-            <div class="tags_section">
-                <p class="tags">First Person Shooter</p>
-                <p class="tags">Multiplayer</p>
-            </div>
-            <h1>Game Title</h1>
+        <div class="slideshow">
+          <img
+            class="slides"
+            src="../assets/images/gameplay-pic-1.jpg"
+            alt="Screenshot of gameplay from 'Assassin' showing an action sequence"
+          />
+        </div>
 
-            <div class="rating margin-bottom">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-regular fa-star"></i>
-            </div>
+        <div class="slideshow">
+          <img
+            class="slides"
+            src="../assets/images/gameplay-pic-2.jpg"
+            alt="Screenshot of gameplay from 'Assassin' featuring character customization options"
+          />
+        </div>
 
-            <p class="game-title_paragraph margin-bottom">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit sapiente exercitationem deleniti cupiditate ipsam repudiandae in rerum, esse cum ducimus repellendus sequi et illum nisi natus illo alias quia nulla. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit sapiente exercitationem deleniti cupiditate ipsam repudiandae in rerum, esse cum ducimus repellendus sequi et illum nisi natus illo alias quia nulla.
-            </p>
-            <p class="price-styling margin-bottom">$60</p>
+        <!-- arrow buttons (labels) -->
+        <label
+          for="radio2"
+          class="next next1"
+          tabindex="0"
+          role="button"
+          aria-label="Next slide"
+          ><i class="fa-solid fa-chevron-right"></i
+        ></label>
+        <label
+          for="radio3"
+          class="prev prev1"
+          tabindex="0"
+          role="button"
+          aria-label="Previous slide"
+          ><i class="fa-solid fa-chevron-left"></i
+        ></label>
 
-            <div class="button-area">
-                <div class="counter margin-bottom">
-                    <i class="fa-solid fa-minus"></i>
-                    <p class="bold-text-style">1</p>
-                    <i class="fa-solid fa-plus"></i>
-                </div>
+        <label
+          for="radio3"
+          class="next next2"
+          tabindex="0"
+          role="button"
+          aria-label="Next slide"
+          ><i class="fa-solid fa-chevron-right"></i
+        ></label>
+        <label
+          for="radio1"
+          class="prev prev2"
+          tabindex="0"
+          role="button"
+          aria-label="Previous slide"
+          ><i class="fa-solid fa-chevron-left"></i
+        ></label>
 
-                <a href="../cart/" class="button">Add to cart</a>
-            </div>
-        </section>
+        <label
+          for="radio1"
+          class="next next3"
+          tabindex="0"
+          role="button"
+          aria-label="Next slide"
+          ><i class="fa-solid fa-chevron-right"></i
+        ></label>
+        <label
+          for="radio2"
+          class="prev prev3"
+          tabindex="0"
+          role="button"
+          aria-label="Previous slide"
+          ><i class="fa-solid fa-chevron-left"></i
+        ></label>
+      </div>
+
+      <section class="text-section">
+        <div class="tags_section">
+          <p class="tags"></p>
+        </div>
+        <h1></h1>
+
+        <div class="rating margin-bottom">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-regular fa-star"></i>
+        </div>
+
+        <p class="game-title_paragraph margin-bottom"></p>
+        <p class="price-styling margin-bottom"></p>
+
+        <div class="button-area">
+          <div class="counter margin-bottom">
+            <i class="fa-solid fa-minus"></i>
+            <p class="bold-text-style">1</p>
+            <i class="fa-solid fa-plus"></i>
+          </div>
+
+          <a href="../cart/" class="button">Add to cart</a>
+        </div>
+      </section>
     </main>
 
     <footer>
-        <p class="copyright">&copy; 2024 Gamehub | All Rights Reserved</p>
-        <div class="social-media">
-            <i class="social-media_icon fa-brands fa-reddit-alien"></i>
-            <i class="social-media_icon fa-brands fa-instagram"></i>
-            <i class="social-media_icon fa-brands fa-twitter"></i>
-        </div>
+      <p class="copyright">&copy; 2024 Gamehub | All Rights Reserved</p>
+      <div class="social-media">
+        <i class="social-media_icon fa-brands fa-reddit-alien"></i>
+        <i class="social-media_icon fa-brands fa-instagram"></i>
+        <i class="social-media_icon fa-brands fa-twitter"></i>
+      </div>
     </footer>
-</body>
-    
+  </body>
 </html>
