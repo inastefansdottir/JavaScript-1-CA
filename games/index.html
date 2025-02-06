@@ -95,7 +95,32 @@
     </header>
 
     <main class="games-main">
-      <h1>Games</h1>
+      <div class="games-header">
+        <h1>Games</h1>
+        <div class="filters">
+          <select
+            id="categoryFilter"
+            class="filters-styling"
+            aria-label="Filter games by category"
+          >
+            <option value="all">All Categories</option>
+            <option value="Action">Action</option>
+            <option value="Adventure">Adventure</option>
+            <option value="Horror">Horror</option>
+            <option value="Sports">Sports</option>
+          </select>
+
+          <select
+            id="priceSort"
+            class="filters-styling"
+            aria-label="Sort games by price"
+          >
+            <option value="default">Sort by Price</option>
+            <option value="lowToHigh">Lowest to Highest</option>
+            <option value="highToLow">Highest to Lowest</option>
+          </select>
+        </div>
+      </div>
       <section class="product-list"></section>
     </main>
 

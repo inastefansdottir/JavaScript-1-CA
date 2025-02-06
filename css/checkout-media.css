@@ -1,73 +1,73 @@
 /* Checkout page media */
 @media (max-width: 1350px) {
-    .type-area-section {
-        flex-direction: column;
-    }
+  .type-area-section {
+    flex-direction: column;
+  }
 
-    .type-area-styling {
-        width: 35vw;
-    }
+  .type-area-styling {
+    width: 35vw;
+  }
 }
 
 @media (max-width: 900px) {
-    .container-divider {
-        flex-direction: column;
-        gap: 40px;
-        align-items: center;
-    }
+  .container-divider {
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+  }
 
-    .type-area-section {
-        flex-direction: row;
-        justify-content: space-between;
-    }
+  .type-area-section {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 
-    .type-area-styling {
-        width: 40vw;
-    }
+  .type-area-styling {
+    width: 40vw;
+  }
 
-    .order-summary {
-        margin-top: 40px;
-    }
+  .order-summary {
+    margin-top: 40px;
+  }
 
-    /* payment successful page media */
-    .purchase-complete-section h1 {
-        font-size: 1.8em;
-    }
-    
-    .purchase-complete-section p {
-        font-size: 1.2em;
-    }
+  /* payment successful page media */
+  .purchase-complete-section h1 {
+    font-size: 1.8em;
+  }
 
-    .fa-circle-check {
-        font-size: 9em;
-    }
+  .purchase-complete-section p {
+    font-size: 1.2em;
+  }
+
+  .fa-circle-check {
+    font-size: 9em;
+  }
 }
 
 @media (max-width: 600px) {
-    .main-checkout h1{
-        font-size: 1.8em;
-        margin-left: 20px;
-    }
+  .main-checkout h1 {
+    font-size: 1.8em;
+    margin-left: 20px;
+  }
 
-    .type-area-section {
-        flex-direction: column;
-    }
+  .type-area-section {
+    flex-direction: column;
+  }
 
-    .type-area-styling {
-        width: 80vw;
-    }
+  .type-area-styling {
+    width: 80vw;
+  }
 
-    .order-list {
-        margin-top: 20px;
-        display: grid;
-        grid-template-columns: 110px 80px 50px 50px 30px;
-        grid-template-rows: 15px 1px 110px 1px;
-    }
+  .order-list {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 110px 80px 50px 50px 30px;
+    grid-template-rows: 15px 1px 110px 1px;
+  }
 
-    .product-image {
-        width: 95px;
-        height: 90px;
-        object-fit: cover;
-        border-radius: 10px;
-    }
+  .product-image {
+    width: 95px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
 }

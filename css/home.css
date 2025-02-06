@@ -29,20 +29,23 @@
 }
 
 .hero-text h1 {
-  font-size: 2.5em;
+  font-size: 60px;
   margin-bottom: 10px;
 }
 
 .hero-text p {
-  font-size: 1em;
+  font-size: 20px;
   font-weight: 300;
-  width: 50%;
+  width: 500px;
   margin-bottom: 20px;
 }
 
 /* best sellers section */
 .best-sellers {
-  margin: 2% 5%;
+  max-width: 1600px;
+  width: calc(100% - 400px);
+  margin: 0 auto;
+  padding: 100px 0;
 }
 
 .best-sellers_text {
@@ -60,19 +63,15 @@
 .game-card {
   position: relative;
   overflow: hidden;
-  height: 400px;
-  width: 400px;
+  height: 320px;
+  width: 320px;
   border-radius: 20px;
   transition: transform 0.3s ease;
 }
 
-.game-card:hover {
-  transform: scale(1.05); /* Smooth hover zoom effect */
-}
-
 .game-card_image {
-  width: 400px;
-  height: 400px;
+  width: 320px;
+  height: 320px;
   object-fit: cover;
   border-radius: 20px;
 }
@@ -93,9 +92,15 @@
   transition: opacity 0.3s ease;
 }
 
-.game-card:hover .game-card_hover {
-  opacity: 1; /* Show hover content on hover */
-  pointer-events: auto; /* Allow interaction */
+@media (hover: hover) {
+  .game-card:hover {
+    transform: scale(1.05); /* Smooth hover zoom effect */
+  }
+
+  .game-card:hover .game-card_hover {
+    opacity: 1; /* Show hover content on hover */
+    pointer-events: auto; /* Allow interaction */
+  }
 }
 
 .game-card_hover h3,

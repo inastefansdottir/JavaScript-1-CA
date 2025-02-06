@@ -1,221 +1,243 @@
 .games-main {
-    max-width: 1100%;
-    margin: 2% 5%;
+  max-width: 1100%;
+  margin: 2% 5%;
 }
 
 .games-main h1 {
-    font-size: 2em;
+  font-size: 2em;
 }
 
+/* Filters */
+.games-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filters-styling {
+  font-family: "alexandria", Helvetica, sans-serif, arial;
+  font-weight: 400;
+  font-size: 14px;
+  background-color: #db21cc;
+  color: #ffffff;
+  padding: 8px 10px;
+  margin-left: 20px;
+  border-radius: 30px;
+}
+
+/* Products */
 .product-list {
-    display: grid;
-    grid-template-columns: repeat(5, minmax(0, 1fr));
-    grid-gap: 2em;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-gap: 2em;
 }
 
 .products {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    align-items: center;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
 }
 
 .products img {
-    border-radius: 30px;
-    width: 100%;
-    object-fit: cover;
-    margin-top: 30px;
-    margin-bottom: 10px;
+  border-radius: 30px;
+  width: 100%;
+  object-fit: cover;
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
 
 .products h2,
 .products p {
-    grid-column: 1;
-    font-size: 1em;
-    margin: 5px;
+  grid-column: 1;
+  font-size: 1em;
+  margin: 5px;
 }
 
 .products h2 {
-    font-size: 1.2em;
+  font-size: 1.2em;
 }
 
 .game-cover {
-    grid-column: -1/1;
+  grid-column: -1/1;
 }
 
 .small-button {
-    font-size: 0.8em;
-    padding: 10px 20px;
+  font-size: 0.8em;
+  padding: 10px 20px;
 }
-
 
 /* specific games page*/
 .specififc-game-main {
-    display: flex;
-    gap: 40px;
-    margin: 5% auto;
-    height: 630px;
+  display: flex;
+  gap: 40px;
+  margin: 5% auto;
+  height: 630px;
 }
 
 /* thumbnail section */
 fieldset {
-    border: none;
-    padding: 0;
-    margin: 0;
+  border: none;
+  padding: 0;
+  margin: 0;
 }
 
 legend {
-    display: none;
+  display: none;
 }
 
 .thumbnail-section {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .thumbnail {
-    width: 120px;
-    height: 125px;
-    object-fit: cover;
-    border-radius: 10px;
-    cursor: pointer;
-    opacity: 0.5; /* 50% opacity */
-    transition: opacity 0.3s ease-in-out; /* smooth transition over 0.3 seconds */
+  width: 120px;
+  height: 125px;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+  opacity: 0.5; /* 50% opacity */
+  transition: opacity 0.3s ease-in-out; /* smooth transition over 0.3 seconds */
 }
 
 .thumbnail:hover {
-    opacity: 1; /* full opacity when hovered */
+  opacity: 1; /* full opacity when hovered */
 }
 
 /* slideshow section */
 .slideshow-section {
-    position: relative;
-    max-width: 600px;
-    height: 630px;
-    overflow: hidden;
+  position: relative;
+  max-width: 600px;
+  height: 630px;
+  overflow: hidden;
 }
 
 .slideshow {
-    display: none;
+  display: none;
 }
 
 .slides {
-    width: 600px;
-    height: 630px;
-    object-fit: cover;
-    border-radius: 30px;
+  width: 600px;
+  height: 630px;
+  object-fit: cover;
+  border-radius: 30px;
 }
 
 /* show the slide when the correct radio button is checked */
 #radio1:checked ~ .first,
 #radio2:checked ~ .slideshow:nth-of-type(2),
 #radio3:checked ~ .slideshow:nth-of-type(3) {
-    display: block;
+  display: block;
 }
 
 input[type="radio"] {
-    display: none;
+  display: none;
 }
 
-.prev, 
+.prev,
 .next {
-    position: absolute;
-    top: 50%;
-    color: rgb(225, 225, 225, 0.8);
-    font-size: 35px;
-    cursor: pointer;
-    user-select: none;
-    display: none;
+  position: absolute;
+  top: 50%;
+  color: rgb(225, 225, 225, 0.8);
+  font-size: 35px;
+  cursor: pointer;
+  user-select: none;
+  display: none;
 }
 
 .prev {
-    left: 15px;
+  left: 15px;
 }
 
 .next {
-    right: 15px;
+  right: 15px;
 }
 
 .prev:hover,
 .next:hover {
-    color: #801889;
+  color: #801889;
 }
 
 /* show/hide arrows based on the checked state */
 #radio1:checked ~ .prev1,
 #radio2:checked ~ .prev2,
 #radio3:checked ~ .prev3 {
-    display: block;
+  display: block;
 }
 
 #radio1:checked ~ .next1,
 #radio2:checked ~ .next2,
 #radio3:checked ~ .next3 {
-    display: block;
+  display: block;
 }
 
 /* text section */
 .text-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-left: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 40px;
 }
 
 .text-section h1 {
-    font-size: 2.5em;
-    font-weight: 500;
+  font-size: 2.5em;
+  font-weight: 500;
 }
 
 .tags_section {
-    display: flex;
-    gap: 10px;
+  display: flex;
+  gap: 10px;
 }
 
 .tags {
-    font-size: 0.7em;
-    padding: 2px 7px;
-    border-radius: 20px;
+  font-size: 0.7em;
+  padding: 2px 7px;
+  border-radius: 20px;
 }
 
 .rating {
-    margin-top: 3px;
-    font-size: 1.1em;
+  margin-top: 3px;
+  font-size: 1.1em;
 }
 
 .margin-bottom {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .game-title_paragraph {
-    width: 350px;
+  width: 350px;
 }
 
 .price-styling {
-    font-size: 1.3em;
-    font-weight: 400;
+  font-size: 1.3em;
+  font-weight: 400;
 }
 .counter {
-    padding: 10px 15px;
-    border-radius: 30px;
-    display: flex;
-    gap: 20px;
-    width: fit-content;
-    align-items: center;
+  padding: 10px 15px;
+  border-radius: 30px;
+  display: flex;
+  gap: 20px;
+  width: fit-content;
+  align-items: center;
 }
 
 .bold-text-style {
-    font-weight: 400;
-    font-size: 1em;
+  font-weight: 400;
+  font-size: 1em;
 }
 
 .fa-plus,
 .fa-minus {
-    font-size: 15px;
+  font-size: 15px;
 }
 
 .tags,
 .counter {
-    background: linear-gradient(45deg, rgba(255, 255, 255, 0.3)0%, rgba(255, 255, 255, 0.03) 100%);
-    border: 0.3px solid rgba(255, 255, 255, 0.3);
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.3) 0%,
+    rgba(255, 255, 255, 0.03) 100%
+  );
+  border: 0.3px solid rgba(255, 255, 255, 0.3);
 }
