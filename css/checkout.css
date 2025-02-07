@@ -1,184 +1,206 @@
 /* shipping address and payment */
 .main-checkout {
-    display: flex;
-    flex-direction: column;
-    margin: 3% 5%;
+  display: flex;
+  flex-direction: column;
+  max-width: 1600px;
+  width: calc(100% - 400px);
+  margin: 0 auto;
+  margin-top: 50px;
 }
 
-.main-checkout h1{
-    font-size: 2em;
+.main-checkout h1 {
+  font-size: 2em;
 }
 
 .container-divider {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  gap: 50px;
 }
 
 /* customer info, shipping address and payment section */
 .type-area-section {
-    display: flex;
-    gap: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  width: 100%;
 }
 
 .flexbox-styling {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
 }
 
 .flexbox-styling h2 {
-    margin: 10px 0px;
-    font-weight: 400;
+  margin: 10px 0px;
+  font-weight: 400;
 }
 
 .type-area-styling {
-    background-color: transparent;
-    color: #ffffff;
-    width: 25vw;
-    font-weight: 400;
-    font-size: 0.8em;
-    padding: 14px 20px;
-    border: 1px solid white;
-    border-radius: 30px;
+  background-color: transparent;
+  color: #ffffff;
+  width: 100%;
+  font-weight: 400;
+  font-size: 14px;
+  padding: 14px 20px;
+  border: 1px solid white;
+  border-radius: 30px;
 }
 
 .width-space {
-    width: auto;
-    justify-content: space-between;
+  width: auto;
+  justify-content: space-between;
 }
 
 /* your purchases section, grid-area */
-.purchase {grid-area: purchase;}
+.purchase {
+  grid-area: purchase;
+}
 
-.product-image {grid-area: image;}
-.title {grid-area: title;}
-.quantity {grid-area: quantity;}
-.total-price {grid-area: total-price;}
-.ex {grid-area: ex;}
+.product-image {
+  grid-area: image;
+}
+.title {
+  grid-area: title;
+}
+.quantity {
+  grid-area: quantity;
+}
+.total-price {
+  grid-area: total-price;
+}
+.ex {
+  grid-area: ex;
+}
 
 /* CSS Grids grid template */
 .order-list {
-    margin-top: 20px;
-    display: grid;
-    grid-template-columns: 130px 100px 80px 80px 50px;
-    grid-template-rows: 15px 1px 130px 1px;
-    gap: 5px;
-    grid-template-areas: 
-        "purchase . . . ."
-        ". . . . ."
-        "image title quantity total-price ex"
-        ". . . . .";
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 130px 100px 80px 80px 50px;
+  grid-template-rows: 15px 1px 130px 1px;
+  gap: 5px;
+  grid-template-areas:
+    "purchase . . . ."
+    ". . . . ."
+    "image title quantity total-price ex"
+    ". . . . .";
 }
 
 /* CSS Grids content */
 .purchase {
-    font-size: 0.8em;
-    font-weight: 300;
+  font-size: 0.8em;
+  font-weight: 300;
 }
 
 .line-seperator {
-    position: relative;
-    grid-column: 1 / -1; /* spans all columns */
-    border-bottom: 1px solid rgba(225, 225, 225, 0.5);
+  position: relative;
+  grid-column: 1 / -1; /* spans all columns */
+  border-bottom: 1px solid rgba(225, 225, 225, 0.5);
 }
 
 .product-image {
-    width: 120px;
-    height: 110px;
-    object-fit: cover;
-    border-radius: 10px;
+  width: 120px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
 .center-align {
-    align-self: center;
+  align-self: center;
 }
 
 .bold-text-style {
-    font-weight: 400;
+  font-weight: 400;
 }
 
 .ex {
-    width: 30px;
-    height: 30px;
-    align-content: center;
-    text-align: center;
-    border-radius: 50%;
-    justify-self: end;
-    font-size: 12px;
+  width: 30px;
+  height: 30px;
+  align-content: center;
+  text-align: center;
+  border-radius: 50%;
+  justify-self: end;
+  font-size: 12px;
 }
 
 .ex:hover {
-    background-color: #801889;
-    border-color: #801889;
+  background-color: #801889;
+  border-color: #801889;
 }
 
 .ex:active {
-    background-color: #db21cc;
-    border-color: #db21cc;
+  background-color: #db21cc;
+  border-color: #db21cc;
 }
 
 .ex,
 .order-summary {
-    background: linear-gradient(45deg, rgba(255, 255, 255, 0.3)0%, rgba(255, 255, 255, 0.03) 100%);
-    border: 0.3px solid rgba(255, 255, 255, 0.3);
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.3) 0%,
+    rgba(255, 255, 255, 0.03) 100%
+  );
+  border: 0.3px solid rgba(255, 255, 255, 0.3);
 }
 
 /* order summary */
 .order-summary {
-    display: flex;
-    width: auto;
-    flex-direction: column;
-    padding: 30px;
-    gap: 35px;
-    border-radius: 30px;
+  display: flex;
+  width: auto;
+  flex-direction: column;
+  padding: 30px;
+  gap: 35px;
+  border-radius: 30px;
 }
 
 .order-summary h3 {
-    font-size: 1.5em;
-    font-weight: 500;
+  font-size: 1.5em;
+  font-weight: 500;
 }
 
 .order-summary_text {
-    display: flex;
-    justify-content: space-between;
-    font-size: 0.9em;
-    font-weight: 400;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9em;
+  font-weight: 400;
 }
 
 .faded-text {
-    color: rgba(225, 225, 225, 0.5);
+  color: rgba(225, 225, 225, 0.5);
 }
 
 .bigger-text {
-    font-size: 1.2em;
+  font-size: 1.2em;
 }
-
 
 /* payment succesful page */
 .purchase-complete-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 70px auto 0px auto;
-    text-align: center;
-    gap: 20px;
-    color: #db21cc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 70px auto 0px auto;
+  text-align: center;
+  gap: 20px;
+  color: #db21cc;
 }
 
 .purchase-complete-section h1 {
-    font-size: 2.2em;
-    font-weight: 500;
+  font-size: 2.2em;
+  font-weight: 500;
 }
 
 .purchase-complete-section p {
-    font-size: 1.4em;
-    font-weight: 300;
-    color: #db21cc;
-    width: 300px;
-    margin: auto;
+  font-size: 1.4em;
+  font-weight: 300;
+  color: #db21cc;
+  width: 300px;
+  margin: auto;
 }
 
 .fa-circle-check {
-    font-size: 12em;
+  font-size: 12em;
 }

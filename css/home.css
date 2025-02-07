@@ -24,7 +24,7 @@
   flex-direction: column; /* stack text vertically */
   align-items: center; /* center text horizintally */
   text-align: center; /* center text */
-  margin: 15%;
+  margin: 400px 0;
   z-index: 2;
 }
 
@@ -42,6 +42,10 @@
 
 /* best sellers section */
 .best-sellers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
   max-width: 1600px;
   width: calc(100% - 400px);
   margin: 0 auto;
@@ -49,14 +53,12 @@
 }
 
 .best-sellers_text {
-  margin-bottom: 3%;
   font-weight: 400;
-  font-size: 2rem;
+  font-size: 36px;
 }
 
 .best-sellers_games {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  display: flex;
   gap: 20px;
 }
 

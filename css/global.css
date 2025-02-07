@@ -44,14 +44,16 @@ texteara {
   display: flex; /* creates a flex container */
   justify-content: space-between; /* spaces items on opposites sides */
   align-items: center; /* centers items within the header */
-  padding: 0.5% 5%; /* adds vertical and horizontal padding for spacing */
+  max-width: 1600px;
+  width: calc(100% - 400px); /* ensures 200px padding on both sides */
+  margin: 0 auto;
+  padding: 10px 0 0 0;
   position: relative;
 }
 
 .logo img {
-  max-height: 60px;
-  max-width: 100%;
   height: auto;
+  width: 80px;
 }
 
 .nav-links {
@@ -63,7 +65,6 @@ texteara {
 .nav-links a {
   color: #ffffff;
   text-decoration: none; /* remove underline from links */
-  font-size: 1.2em;
   font-weight: 400;
 }
 
@@ -81,14 +82,6 @@ texteara {
 }
 
 /* right side of header */
-#search {
-  font-weight: 400;
-  font-size: 0.8em;
-  padding: 12px 20px;
-  border-radius: 30px;
-  color: #ffffff;
-}
-
 .search-icons-section {
   display: flex;
   align-items: center;
@@ -150,8 +143,10 @@ main {
 /* footer style */
 footer {
   display: flex;
-  width: 100%; /* full width of the page, its needed to fix the css grids issue on the body element */
-  padding: 50px 5%;
+  padding: 100px 0 50px 0;
+  max-width: 1600px;
+  width: calc(100% - 400px); /* ensures 200px padding on both sides */
+  margin: 0 auto;
   justify-content: space-between;
   align-items: center;
 }

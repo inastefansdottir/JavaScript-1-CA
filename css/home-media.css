@@ -21,9 +21,8 @@
   }
 
   .hero-text {
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
+    align-items: center;
+    margin: 300px 0;
   }
 
   .best-sellers {
@@ -41,24 +40,50 @@
   }
 
   .hero-text p {
-    width: 85%;
-    font-size: 0.8em;
+    width: 350px;
+    font-size: 14px;
   }
 
+  .hero-text {
+    margin: 200px 0;
+  }
+
+  /* best sellers */
   .best-sellers_text {
     text-align: center;
-    margin-bottom: 30px;
   }
 
   .best-sellers_games {
-    flex-direction: column;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(2, minmax(0, 200px));
     gap: 50px;
-    margin: auto;
+  }
+}
+
+@media (max-width: 700px) {
+  /* Best sellers section */
+  .best-sellers_games {
+    display: flex;
+    flex-direction: column;
   }
 
-  .best-sellers_games img {
-    width: 85vw;
-    height: 85vw;
+  .game-card {
+    height: 320px;
+    width: 320px;
+  }
+
+  .game-card_image {
+    width: 320px;
+    height: 320px;
+  }
+
+  .slider-control.left {
+    left: 10px;
+  }
+
+  .slider-control.right {
+    right: 10px;
   }
 
   /* newsletter section */
