@@ -3,7 +3,7 @@
   .container-divider {
     flex-direction: column;
     gap: 40px;
-    align-items: center;
+    align-items: flex-end;
   }
 
   .type-area-section {
@@ -15,17 +15,13 @@
     max-width: auto;
   }
 
-  .order-summary {
-    margin-top: 40px;
-  }
-
   /* payment successful page media */
   .purchase-complete-section h1 {
-    font-size: 1.8em;
+    font-size: 32px;
   }
 
   .purchase-complete-section p {
-    font-size: 1.2em;
+    font-size: 20px;
   }
 
   .fa-circle-check {
@@ -41,6 +37,10 @@
 }
 
 @media (max-width: 600px) {
+  .container-divider {
+    align-items: center;
+  }
+
   .main-checkout h1 {
     font-size: 30px;
     text-align: center;
@@ -50,11 +50,11 @@
     flex-direction: column;
   }
 
-  .order-list {
+  .product-container {
     margin-top: 20px;
     display: grid;
-    grid-template-columns: 110px 80px 50px 50px 30px;
-    grid-template-rows: 15px 1px 110px 1px;
+    grid-template-columns: 110px 100px 50px 50px;
+    grid-template-rows: 110px 1px;
   }
 
   .product-image {
@@ -62,5 +62,14 @@
     height: 90px;
     object-fit: cover;
     border-radius: 10px;
+  }
+
+  /* payment successful page media */
+  .purchase-complete-section h1 {
+    font-size: 26px;
+  }
+
+  .purchase-complete-section p {
+    font-size: 16px;
   }
 }

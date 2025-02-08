@@ -96,6 +96,10 @@
     z-index: 10;
   }
 
+  .cart-count-badge {
+    top: -3px;
+  }
+
   /* footer */
   footer {
     flex-direction: column;

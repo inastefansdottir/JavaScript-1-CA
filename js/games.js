@@ -1,4 +1,5 @@
 import { fetchAllGames } from "./api.js";
+import { cart, updateCartIcon } from "./cart.js";
 
 let allGames = []; // Store all games globally
 
@@ -27,8 +28,17 @@ const renderGames = (games) => {
 
     const addToCartButton = document.createElement("button");
     addToCartButton.classList.add("button", "small-button");
-    addToCartButton.href = "../cart/";
     addToCartButton.textContent = "Add to cart";
+    addToCartButton.onclick = () => {
+      cart.addItem({
+        id: game.id,
+        title: game.title,
+        price: game.price,
+        image: game.image.url,
+        quantity: 1, // default quantity is 1
+      });
+      updateCartIcon();
+    };
 
     // Append elements to the product card
     gameCover.appendChild(gameImage);

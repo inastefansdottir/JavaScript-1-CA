@@ -52,7 +52,6 @@
 
 .width-space {
   width: auto;
-  justify-content: space-between;
 }
 
 /* your purchases section, grid-area */
@@ -72,34 +71,29 @@
 .total-price {
   grid-area: total-price;
 }
-.ex {
-  grid-area: ex;
-}
 
 /* CSS Grids grid template */
-.order-list {
-  margin-top: 20px;
+.product-container {
+  margin-top: 10px;
   display: grid;
-  grid-template-columns: 130px 100px 80px 80px 50px;
-  grid-template-rows: 15px 1px 130px 1px;
+  grid-template-columns: 130px 150px 80px 80px;
+  grid-template-rows: 130px 1px;
   gap: 5px;
   grid-template-areas:
-    "purchase . . . ."
-    ". . . . ."
-    "image title quantity total-price ex"
-    ". . . . .";
+    "image title quantity total-price"
+    ". . . .";
 }
 
 /* CSS Grids content */
 .purchase {
-  font-size: 0.8em;
   font-weight: 300;
+  margin-bottom: 10px;
 }
 
-.line-seperator {
+.line-separator {
   position: relative;
-  grid-column: 1 / -1; /* spans all columns */
   border-bottom: 1px solid rgba(225, 225, 225, 0.5);
+  grid-column: 1 / -1; /* spans all columns */
 }
 
 .product-image {
@@ -153,6 +147,7 @@
   width: auto;
   flex-direction: column;
   padding: 30px;
+  margin-top: 40px;
   gap: 35px;
   border-radius: 30px;
 }
@@ -178,23 +173,28 @@
 }
 
 /* payment succesful page */
+.payment-successful_main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .purchase-complete-section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 70px auto 0px auto;
   text-align: center;
   gap: 20px;
   color: #db21cc;
 }
 
 .purchase-complete-section h1 {
-  font-size: 2.2em;
+  font-size: 36px;
   font-weight: 500;
 }
 
 .purchase-complete-section p {
-  font-size: 1.4em;
+  font-size: 24px;
   font-weight: 300;
   color: #db21cc;
   width: 300px;
