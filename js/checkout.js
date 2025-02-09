@@ -1,4 +1,9 @@
+import { cart } from "./cart.js";
+
 document.addEventListener("DOMContentLoaded", function () {
+  const form = document.querySelector("form");
+  form.addEventListener("submit", handleFormSubmit);
+
   renderCheckoutItems();
   updateCheckoutSummary();
 });
@@ -54,7 +59,7 @@ function handleFormSubmit(event) {
     // Shipping address
     country: document.getElementById("country").value,
     city: document.getElementById("city").value,
-    streetAdress: document.getElementById("street-address").value,
+    streetAddress: document.getElementById("street-address").value,
     zipCode: document.getElementById("zip-code").value,
 
     // Payment
@@ -65,11 +70,7 @@ function handleFormSubmit(event) {
   };
 
   localStorage.setItem("checkoutFormData", JSON.stringify(formData));
+  cart.clear(); // Clear the cart using the new method
 
-  // Clear the cart
-  localStorage.removeItem("cartItems");
-  localStorage.setItem("subtotal", "0.00");
-
-  // Redirect to a confirmation page
   window.location.href = "../cart/payment-successful.html";
 }

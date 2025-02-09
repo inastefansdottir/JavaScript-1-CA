@@ -3,7 +3,15 @@ import { cart, updateCartIcon } from "./cart.js";
 document.addEventListener("DOMContentLoaded", function () {
   cart.load(); // Ensure cart items are loaded from local storage
   renderCartItems();
+  document.addEventListener("cartCleared", handleCartCleared); // Listen for the cart cleared event
 });
+
+function handleCartCleared() {
+  console.log("Cart has been cleared. Updating UI...");
+  cart.items = []; // Reset the cart items in the module
+  renderCartItems(); // Re-render the cart items
+  updateSummary(0); // Update summary to show zero
+}
 
 function renderCartItems() {
   const orderList = document.querySelector(".order-list");

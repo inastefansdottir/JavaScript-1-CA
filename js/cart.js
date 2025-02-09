@@ -52,6 +52,11 @@ export const cart = {
   getCartCount() {
     return this.items.reduce((count, item) => count + item.quantity, 0);
   },
+
+  clear() {
+    this.items = []; // Reset the cart to an empty array
+    this.save(); // Save the empty cart to localStorage
+  },
 };
 
 // Event to load cart and update the cart icon when the page is fully loaded
