@@ -4,17 +4,16 @@ document.addEventListener("DOMContentLoaded", function () {
   const form = document.querySelector("form");
   form.addEventListener("submit", handleFormSubmit);
 
+  cart.load();
   renderCheckoutItems();
   updateCheckoutSummary();
 });
 
 function renderCheckoutItems() {
   const orderList = document.querySelector(".order-list");
-  const items = JSON.parse(localStorage.getItem("cartItems")) || [];
-
   let innerHTML = `<p class="purchase">Your Purchases</p><div class="line-separator"></div>`;
 
-  items.forEach((item) => {
+  cart.items.forEach((item) => {
     innerHTML += `
       <div class="product-container">
         <img class="product-image center-align" src="${
@@ -35,8 +34,7 @@ function renderCheckoutItems() {
 
 function updateCheckoutSummary() {
   // Retrieve the subtotal from localStorage and convert it to a number
-  const subtotal = parseFloat(localStorage.getItem("subtotal") || "0.00");
-  const formattedSubtoal = subtotal.toFixed(2);
+  const formattedSubtoal = cart.subtotal.toFixed(2);
   document.getElementById(
     "checkoutSubTotal"
   ).textContent = `$${formattedSubtoal}`;
@@ -69,8 +67,7 @@ function handleFormSubmit(event) {
     cvc: document.getElementById("cvc").value,
   };
 
-  localStorage.setItem("checkoutFormData", JSON.stringify(formData));
-  cart.clear(); // Clear the cart using the new method
+  cart.clear(); // Clear the cart
 
   window.location.href = "../cart/payment-successful.html";
 }

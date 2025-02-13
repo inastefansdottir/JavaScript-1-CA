@@ -29,6 +29,7 @@ const renderGames = (games) => {
     const addToCartButton = document.createElement("button");
     addToCartButton.classList.add("button", "small-button");
     addToCartButton.textContent = "Add to cart";
+    // Define an onclick event for the button that adds the game to the cart
     addToCartButton.onclick = () => {
       cart.addItem({
         id: game.id,

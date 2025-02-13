@@ -1,14 +1,29 @@
 export const cart = {
   items: [], // Stores items added to the cart
+  subtotal: 0, // Stores the current subtotal of the cart
 
   // Saves the current state of the cart to local storage to preserve it across sessions
   save() {
-    localStorage.setItem("cart", JSON.stringify(this.items));
+    this.updateSubtotal(); // Update subtotal before saving
+    localStorage.setItem(
+      "cart",
+      JSON.stringify({
+        items: this.items,
+        subtotal: this.subtotal, // Save both items and subtotal
+      })
+    );
   },
 
   // Loads the cart items from local storage when the page is loaded or refreshed
   load() {
-    this.items = JSON.parse(localStorage.getItem("cart")) || [];
+    const storedCart = JSON.parse(localStorage.getItem("cart"));
+    if (storedCart) {
+      this.items = storedCart.items || [];
+      this.subtotal = storedCart.subtotal || 0;
+    } else {
+      this.items = [];
+      this.subtotal = 0;
+    }
   },
 
   // Adds an item to the cart or increases its quantity if it already exists
@@ -31,18 +46,9 @@ export const cart = {
     }
   },
 
-  // Updates the quantity of a specific item in the cart
-  updateQuantity(id, quantity) {
-    const item = this.items.find((i) => i.id === id);
-    if (item) {
-      item.quantity = quantity; // Set new quantity
-      this.save(); // Save changes to local storage
-    }
-  },
-
-  // Calculates the total price of all items in the cart
-  getTotalPrice() {
-    return this.items.reduce(
+  // Updates the subtotal of the cart
+  updateSubtotal() {
+    this.subtotal = this.items.reduce(
       (total, item) => total + item.price * item.quantity,
       0
     );
@@ -55,6 +61,7 @@ export const cart = {
 
   clear() {
     this.items = []; // Reset the cart to an empty array
+    this.subtotal = 0; // Reset the subtotal to 0
     this.save(); // Save the empty cart to localStorage
   },
 };
@@ -67,7 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Function to update the cart icon with the number of item
 export function updateCartIcon() {
-  const cartCount = cart.getCartCount(); // Get the count of all items in teh cart
+  const cartCount = cart.getCartCount(); // Get the count of all items in the cart
   document.querySelectorAll(".fa-cart-shopping").forEach((icon) => {
     const badge = icon.nextElementSibling || document.createElement("span");
     badge.textContent = cartCount; // Set the badge text to the cart count

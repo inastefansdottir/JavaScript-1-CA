@@ -2,14 +2,16 @@ import { fetchAllGames } from "./api.js";
 
 let allGames = []; // Store all games globally
 
-// Hero section
+// Updates the hero section of the webpage with game information
 const updateHeroSection = (game) => {
   const heroTextContainer = document.querySelector(".hero-text");
 
+  // Update the hero section's title and description with game data
   heroTextContainer.querySelector("h1").textContent = game.title;
   heroTextContainer.querySelector(".main-paragraph").textContent =
     game.description;
 
+  // Set the href attribute of the "learn more" button with a link to the specific game id
   document.getElementById(
     "learnMoreButton"
   ).href = `./games/specific-game.html?id=${game.id}`;
@@ -36,7 +38,7 @@ const createGameCard = (game) => {
   title.textContent = game.title;
 
   const price = document.createElement("p");
-  price.textContent = `Price; $${game.price}`;
+  price.textContent = `Price: $${game.price}`;
 
   const genre = document.createElement("p");
   genre.textContent = `Genre: ${game.genre}`;
@@ -61,6 +63,7 @@ const renderBestSellers = (games) => {
   const bestSellersContainer = document.querySelector(".best-sellers_games");
   bestSellersContainer.innerHTML = ""; // Clear existing content
 
+  // Only taking the first four games from the array for the best sellers section
   games.slice(0, 4).forEach((game) => {
     const gameCard = createGameCard(game);
     bestSellersContainer.appendChild(gameCard);
@@ -72,9 +75,11 @@ fetchAllGames()
   .then((data) => {
     allGames = data.data; // Store all games globally
 
-    updateHeroSection(allGames[1]);
+    // Update the hero section and render the best sellers using fetched data
+    updateHeroSection(allGames[1]); // Only selecting the "second game"
     renderBestSellers(allGames);
   })
   .catch((error) => {
+    // Log any errors encountered during the fetch operation
     console.error("There was a problem with the fetch operation:", error);
   });

@@ -1,38 +1,37 @@
 import { cart, updateCartIcon } from "./cart.js";
 
+// Listen for the DOMContentLoaded event to ensure the page is fully loaded before executing any script
 document.addEventListener("DOMContentLoaded", function () {
   cart.load(); // Ensure cart items are loaded from local storage
-  renderCartItems();
+  renderCartItems(); // Call function to display cart items on the page
   document.addEventListener("cartCleared", handleCartCleared); // Listen for the cart cleared event
 });
 
 function handleCartCleared() {
-  console.log("Cart has been cleared. Updating UI...");
-  cart.items = []; // Reset the cart items in the module
+  cart.clear(); // Clear all items in the cart object
   renderCartItems(); // Re-render the cart items
-  updateSummary(0); // Update summary to show zero
+  updateSummary(cart.subtotal); // Update summary to show zero
 }
 
+// Renders all cart items into the html
 function renderCartItems() {
   const orderList = document.querySelector(".order-list");
   const staticHeader = orderList.querySelector(".static-header");
-  // Toggle static header visivility
-  staticHeader.style.display = cart.items.length > 0 ? "" : "none";
+  // Toggle static header visibility
+  staticHeader.style.display = cart.getCartCount() > 0 ? "" : "none"; // Toggle visibility based on cart count
 
   // Clear previously added items but keep static headers
   const dynamicContent = orderList.querySelectorAll(".product-container");
   dynamicContent.forEach((el) => el.remove());
 
-  let subtotal = 0; // Initialize subtotal to zero
-
-  // Append items
+  // A container for each item and add to the DOM
   cart.items.forEach((item, index) => {
     const productContainer = document.createElement("div");
     productContainer.className = "product-container"; // Use for styling and organization
-    productContainer.appendChild(createProductLine(item));
-    subtotal += item.price * item.quantity;
+    productContainer.appendChild(createProductLine(item)); // Append the item element to the container
+    cart.subtotal; // Add items subtotal
 
-    if (index < cart.items.length) {
+    if (index < cart.getCartCount()) {
       const separator = document.createElement("div");
       separator.className = "line-separator";
       productContainer.appendChild(separator);
@@ -41,13 +40,7 @@ function renderCartItems() {
     orderList.appendChild(productContainer);
   });
 
-  updateLocalStorageCart(subtotal);
-  updateSummary(subtotal);
-}
-
-function updateLocalStorageCart(subtotal) {
-  localStorage.setItem("cartItems", JSON.stringify(cart.items));
-  localStorage.setItem("subtotal", String(subtotal));
+  updateSummary(cart.subtotal);
 }
 
 function updateSummary(subtotal) {
@@ -94,10 +87,11 @@ function createProductLine(item) {
   return container;
 }
 
+// Adjust the quantity of an item and update UI and cart
 function adjustItemQuantity(itemId, change) {
   const item = cart.items.find((item) => item.id === itemId);
   if (item) {
-    item.quantity += change;
+    item.quantity += change; // Modify quantity
     if (item.quantity < 1) item.quantity = 1; // Prevent negative quantities
     cart.save();
     renderCartItems();

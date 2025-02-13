@@ -24,7 +24,7 @@
   flex-direction: column; /* stack text vertically */
   align-items: center; /* center text horizintally */
   text-align: center; /* center text */
-  margin: 400px 0;
+  margin: 350px 0;
   z-index: 2;
 }
 
