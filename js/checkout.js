@@ -69,5 +69,5 @@ function handleFormSubmit(event) {
 
   cart.clear(); // Clear the cart
 
-  window.location.href = "../cart/payment-successful.html";
+  window.location.href = "/cart/checkout/payment-successful/";
 }

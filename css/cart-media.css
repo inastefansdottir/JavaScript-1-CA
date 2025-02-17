@@ -8,6 +8,10 @@
   .order-list {
     align-self: flex-start;
   }
+
+  .empty-cart {
+    margin-top: 60px;
+  }
 }
 
 @media (max-width: 1300px) {

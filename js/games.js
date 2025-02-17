@@ -14,7 +14,7 @@ const renderGames = (games) => {
 
     const gameCover = document.createElement("a");
     gameCover.classList.add("game-cover");
-    gameCover.href = `specific-game.html?id=${game.id}`;
+    gameCover.href = `/games/specific-game/?id=${game.id}`;
 
     const gameImage = document.createElement("img");
     gameImage.src = game.image.url;
@@ -24,7 +24,21 @@ const renderGames = (games) => {
     gameTitle.textContent = game.title;
 
     const gamePrice = document.createElement("p");
-    gamePrice.textContent = `$${game.price}`;
+    if (game.onSale) {
+      const originalPrice = document.createElement("span");
+      originalPrice.textContent = `$${game.price}`;
+      originalPrice.style.textDecoration = "line-through";
+      originalPrice.style.opacity = "0.6";
+
+      const discountedPrice = document.createElement("span");
+      discountedPrice.textContent = `$${game.discountedPrice}`;
+      discountedPrice.style.marginLeft = "10px";
+
+      gamePrice.appendChild(originalPrice);
+      gamePrice.appendChild(discountedPrice);
+    } else {
+      gamePrice.textContent = `$${game.price}`;
+    }
 
     const addToCartButton = document.createElement("button");
     addToCartButton.classList.add("button", "small-button");
@@ -34,7 +48,7 @@ const renderGames = (games) => {
       cart.addItem({
         id: game.id,
         title: game.title,
-        price: game.price,
+        price: game.onSale ? game.discountedPrice : game.price,
         image: game.image.url,
         quantity: 1, // default quantity is 1
       });

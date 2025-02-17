@@ -4,13 +4,14 @@ import { cart, updateCartIcon } from "./cart.js";
 document.addEventListener("DOMContentLoaded", function () {
   cart.load(); // Ensure cart items are loaded from local storage
   renderCartItems(); // Call function to display cart items on the page
+  updateCheckoutButton(); // Update the checkout button state based on cart status
   document.addEventListener("cartCleared", handleCartCleared); // Listen for the cart cleared event
 });
 
 function handleCartCleared() {
   cart.clear(); // Clear all items in the cart object
-  renderCartItems(); // Re-render the cart items
   updateSummary(cart.subtotal); // Update summary to show zero
+  updatePageUI();
 }
 
 // Renders all cart items into the html
@@ -41,6 +42,7 @@ function renderCartItems() {
   });
 
   updateSummary(cart.subtotal);
+  updateCheckoutButton(); // Ensure the checkout button works
 }
 
 function updateSummary(subtotal) {
@@ -81,7 +83,7 @@ function createProductLine(item) {
     .querySelector(".fa-plus")
     .addEventListener("click", () => adjustItemQuantity(item.id, 1));
   container
-    .querySelector(".fa-x")
+    .querySelector(".ex")
     .addEventListener("click", () => removeItemFromCart(item.id));
 
   return container;
@@ -94,14 +96,36 @@ function adjustItemQuantity(itemId, change) {
     item.quantity += change; // Modify quantity
     if (item.quantity < 1) item.quantity = 1; // Prevent negative quantities
     cart.save();
-    renderCartItems();
-    updateCartIcon();
+    updatePageUI();
   }
 }
 
 function removeItemFromCart(itemId) {
   cart.removeItem(itemId);
   cart.save();
+  updatePageUI();
+}
+
+function updatePageUI() {
   renderCartItems();
   updateCartIcon();
+  updateCheckoutButton();
+}
+
+function updateCheckoutButton() {
+  const checkoutButton = document.getElementById("checkoutButton");
+  if (cart.getCartCount() === 0) {
+    checkoutButton.classList.add("disabled");
+    checkoutButton.href = "#";
+    displayEmptyCartMessage(true);
+  } else {
+    checkoutButton.classList.remove("disabled");
+    checkoutButton.href = "/cart/checkout/";
+    displayEmptyCartMessage(false);
+  }
+}
+
+function displayEmptyCartMessage(isEmpty) {
+  const message = document.getElementById("emptyCartMessage");
+  message.style.display = isEmpty ? "flex" : "none";
 }

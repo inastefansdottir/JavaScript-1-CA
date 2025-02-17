@@ -23,7 +23,7 @@ const createGameCard = (game) => {
   gameCard.className = "game-card";
 
   const link = document.createElement("a");
-  link.href = `./games/specific-game.html?id=${game.id}`;
+  link.href = `./games/specific-game/?id=${game.id}`;
   link.className = "game-card_Link";
 
   const img = document.createElement("img");
@@ -38,7 +38,22 @@ const createGameCard = (game) => {
   title.textContent = game.title;
 
   const price = document.createElement("p");
-  price.textContent = `Price: $${game.price}`;
+  price.style.fontWeight = "300";
+  if (game.onSale) {
+    const originalPrice = document.createElement("span");
+    originalPrice.textContent = `$${game.price}`;
+    originalPrice.style.textDecoration = "line-through";
+    originalPrice.style.color = "#db21cc";
+
+    const discountedPrice = document.createElement("span");
+    discountedPrice.textContent = `$${game.discountedPrice}`;
+    discountedPrice.style.marginLeft = "10px";
+
+    price.appendChild(originalPrice);
+    price.appendChild(discountedPrice);
+  } else {
+    price.textContent = `$${game.price}`;
+  }
 
   const genre = document.createElement("p");
   genre.textContent = `Genre: ${game.genre}`;
@@ -62,6 +77,11 @@ const createGameCard = (game) => {
 const renderBestSellers = (games) => {
   const bestSellersContainer = document.querySelector(".best-sellers_games");
   bestSellersContainer.innerHTML = ""; // Clear existing content
+
+  // Filter favorites and sort them first
+  games = games
+    .filter((g) => g.favorite)
+    .concat(games.filter((g) => !g.favorite));
 
   // Only taking the first four games from the array for the best sellers section
   games.slice(0, 4).forEach((game) => {

@@ -39,7 +39,7 @@
         </label>
 
         <div class="navigation">
-          <a href="../index.html" class="logo">
+          <a href="../" class="logo">
             <img src="../assets/images/gamehub-logo.png" alt="Gamehub Logo" />
           </a>
           <nav>
@@ -63,7 +63,7 @@
           </div>
         </div>
 
-        <a href="../index.html" class="logo-mobile">
+        <a href="../" class="logo-mobile">
           <img src="../assets/images/gamehub-logo.png" alt="Gamehub Logo" />
         </a>
         <div class="icon-mobile-section">
@@ -89,6 +89,11 @@
     </header>
 
     <main class="cart-main">
+      <div id="emptyCartMessage" class="empty-cart">
+        <i class="fa-regular fa-face-frown"></i>
+        <h2>Your cart is empty</h2>
+      </div>
+
       <div class="order-list">
         <div class="static-header">
           <p class="product text-style">GAME</p>
@@ -124,7 +129,9 @@
             <p>Total</p>
             <p id="cartOrderTotal"></p>
           </div>
-          <a href="../cart/checkout.html" class="button width-100">Checkout</a>
+          <a href="/cart/checkout/" id="checkoutButton" class="button width-100"
+            >Checkout</a
+          >
         </div>
       </section>
     </main>

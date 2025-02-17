@@ -23,7 +23,13 @@ function setupGamePage(game) {
   document.querySelector(".tags").textContent = game.genre;
   document.querySelector(".game-title_paragraph").textContent =
     game.description;
-  document.querySelector(".price-styling").textContent = `$${game.price}`;
+
+  const priceElement = document.querySelector(".price-styling");
+  if (game.onSale) {
+    priceElement.innerHTML = `<span style="margin-right: 5px;">$${game.discountedPrice}</span> <span style="text-decoration: line-through; opacity: 0.6;">$${game.price}</span>`;
+  } else {
+    priceElement.textContent = `$${game.price}`;
+  }
 
   // Update the game images
   document.getElementById("coverImage").src = game.image.url;
@@ -64,7 +70,7 @@ function setupAddToCartButton(game) {
     cart.addItem({
       id: game.id,
       title: game.title,
-      price: game.price,
+      price: game.onSale ? game.discountedPrice : game.price,
       image: game.image.url,
       quantity: quantity,
     });
