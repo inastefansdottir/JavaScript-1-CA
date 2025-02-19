@@ -55,7 +55,7 @@ function handleFormSubmit(event) {
   setTimeout(() => {
     cart.clear(); // Clear the cart after processing
     hideLoadingIndicator(); // Hide the loading indicator
-    window.location.href = "../cart/checkout/payment-successful/"; // Redirect to success page
+    window.location.href = "./cart/checkout/payment-successful.html"; // Redirect to success page
   }, 2000); // Simulate a delay of 2 seconds
 }
 
