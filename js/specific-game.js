@@ -1,5 +1,5 @@
 import { fetchGameById } from "./api.js";
-import { cart, updateCartIcon } from "./cart.js";
+import { cart, updateCartIcon, showCartPopup } from "./cart.js";
 
 // Get game ID from URL
 const params = new URLSearchParams(window.location.search); // Get the query string from the current window's URL (http://example.com/page?gameId=1234)
@@ -84,5 +84,6 @@ function setupAddToCartButton(game) {
       quantity: quantity,
     });
     updateCartIcon();
+    showCartPopup(game);
   });
 }
