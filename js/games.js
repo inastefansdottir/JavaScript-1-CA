@@ -1,5 +1,5 @@
 import { fetchAllGames } from "./api.js";
-import { cart, updateCartIcon } from "./cart.js";
+import { cart, updateCartIcon, showCartPopup } from "./cart.js";
 
 let allGames = []; // Store all games globally
 
@@ -53,6 +53,7 @@ const renderGames = (games) => {
         quantity: 1, // default quantity is 1
       });
       updateCartIcon();
+      showCartPopup(game);
     };
 
     // Append elements to the product card

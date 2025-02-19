@@ -242,6 +242,28 @@ button {
   right: -8px;
 }
 
+.icon-mobile-section .cart-popup {
+  display: none;
+}
+
+.cart-popup {
+  font-weight: 300;
+  position: fixed;
+  top: 60px;
+  transform: translateX(-55%); /* Centering adjustment */
+  text-align: right;
+  background-color: #db21cc;
+  border-radius: 30px;
+  padding: 10px;
+  z-index: 1000;
+  transition: opacity 0.5s ease-in-out;
+  opacity: 1;
+}
+
+.fade-out {
+  opacity: 0;
+}
+
 /* button style */
 .button {
   background-color: #130a7d;

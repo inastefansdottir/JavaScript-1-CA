@@ -84,3 +84,47 @@ export function updateCartIcon() {
     }
   });
 }
+
+// Function for a cart popup message
+export function showCartPopup(game) {
+  const icons = document.querySelector(".search-icons-section");
+  const iconsMobile = document.querySelector(".icon-mobile-section");
+
+  // Check if there's already a popup and remove it
+  const existingPopup = icons.querySelector(".cart-popup");
+  const existingPopupMobile = iconsMobile.querySelector(".cart-popup");
+  if (existingPopup) {
+    existingPopup.remove();
+  }
+  if (existingPopupMobile) {
+    existingPopupMobile.remove();
+  }
+
+  // Create and append popup for desktop
+  const popupDesktop = createPopup(game);
+  icons.appendChild(popupDesktop);
+  handlePopupLifecycle(popupDesktop, icons);
+
+  // Create and append popup for mobile
+  const popupMobile = createPopup(game);
+  iconsMobile.appendChild(popupMobile);
+  handlePopupLifecycle(popupMobile, iconsMobile);
+
+  function createPopup(game) {
+    const popup = document.createElement("div");
+    popup.className = "cart-popup";
+    popup.textContent = `${game.title} added to cart.`;
+    return popup;
+  }
+
+  function handlePopupLifecycle(popup, parent) {
+    setTimeout(() => {
+      popup.classList.add("fade-out"); // Fade out animation
+      setTimeout(() => {
+        if (popup.parentNode === parent) {
+          parent.removeChild(popup);
+        }
+      }, 500); // Remove after animation
+    }, 3000);
+  }
+}
