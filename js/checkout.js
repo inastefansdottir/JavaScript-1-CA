@@ -1,4 +1,5 @@
 import { cart } from "./cart.js";
+import { showLoadingIndicator, hideLoadingIndicator } from "./loader-error.js";
 
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.querySelector("form");
@@ -44,30 +45,34 @@ function updateCheckoutSummary() {
 }
 
 function handleFormSubmit(event) {
-  event.preventDefault(); // Stop form from submitting normally
+  event.preventDefault(); // Prevent the default form submission
+  showLoadingIndicator(); // Show the loading indicator
 
-  // Save form data to localStorage
+  // Perform actual data processing here
+  collectFormData(); // Collect data from the form
+
+  // Simulate processing or replace with actual asynchronous call
+  setTimeout(() => {
+    cart.clear(); // Clear the cart after processing
+    hideLoadingIndicator(); // Hide the loading indicator
+    window.location.href = "/cart/checkout/payment-successful/"; // Redirect to success page
+  }, 2000); // Simulate a delay of 2 seconds
+}
+
+function collectFormData() {
   const formData = {
-    // Customer info
     firstName: document.getElementById("first-name").value,
     lastName: document.getElementById("last-name").value,
     phone: document.getElementById("phone").value,
     email: document.getElementById("email").value,
-
-    // Shipping address
     country: document.getElementById("country").value,
     city: document.getElementById("city").value,
     streetAddress: document.getElementById("street-address").value,
     zipCode: document.getElementById("zip-code").value,
-
-    // Payment
     cardNumber: document.getElementById("card-number").value,
     cardName: document.getElementById("card-name").value,
     expiryDate: document.getElementById("expiry-date").value,
     cvc: document.getElementById("cvc").value,
   };
-
-  cart.clear(); // Clear the cart
-
-  window.location.href = "/cart/checkout/payment-successful/";
+  return formData;
 }

@@ -14,7 +14,7 @@ const updateHeroSection = (game) => {
   // Set the href attribute of the "learn more" button with a link to the specific game id
   document.getElementById(
     "learnMoreButton"
-  ).href = `./games/specific-game.html?id=${game.id}`;
+  ).href = `./games/specific-game/?id=${game.id}`;
 };
 
 // Function to create a game card for best sellers
@@ -91,15 +91,19 @@ const renderBestSellers = (games) => {
 };
 
 // Fetch games
-fetchAllGames()
-  .then((data) => {
+async function loadAndDisplayGames() {
+  try {
+    const data = await fetchAllGames(); // Wait for the fetch to complete
     allGames = data.data; // Store all games globally
 
     // Update the hero section and render the best sellers using fetched data
     updateHeroSection(allGames[1]); // Only selecting the "second game"
     renderBestSellers(allGames);
-  })
-  .catch((error) => {
+  } catch (error) {
     // Log any errors encountered during the fetch operation
     console.error("There was a problem with the fetch operation:", error);
-  });
+  }
+}
+
+// Call the function to execute the fetching and updating UI tasks
+loadAndDisplayGames();

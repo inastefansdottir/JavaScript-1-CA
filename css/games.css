@@ -198,6 +198,11 @@ input[type="radio"] {
   font-weight: 500;
 }
 
+.tags-container {
+  display: flex;
+  gap: 10px;
+}
+
 .tags_section {
   display: flex;
   gap: 10px;

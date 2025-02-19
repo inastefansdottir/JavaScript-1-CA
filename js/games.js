@@ -88,10 +88,10 @@ const applyFiltersAndSorting = () => {
   renderGames(filteredGames);
 };
 
-// Fetch games and initialize the filters
-fetchAllGames()
-  .then((data) => {
-    allGames = data.data; // Store all games for filtering and sorting
+async function loadAndDisplayGames() {
+  try {
+    const data = await fetchAllGames(); // Wait for the fetch to complete
+    allGames = data.data; // Store all games globally
     renderGames(allGames); // Initial render of all games
 
     // Event listeners for category filter and price sort dropdowns
@@ -101,7 +101,11 @@ fetchAllGames()
     document
       .getElementById("priceSort")
       .addEventListener("change", applyFiltersAndSorting);
-  })
-  .catch((error) => {
+  } catch (error) {
+    // Log any errors encountered during the fetch operation
     console.error("There was a problem with the fetch operation:", error);
-  });
+  }
+}
+
+// Call the function to execute the fetching and updating UI tasks
+loadAndDisplayGames();

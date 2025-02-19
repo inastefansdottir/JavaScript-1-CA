@@ -56,6 +56,11 @@
   font-size: 0.8em;
 }
 
+input,
+#message {
+  border: none;
+}
+
 .contact-form_input {
   background-color: transparent;
   color: #ffffff;
@@ -63,8 +68,12 @@
   font-weight: 400;
   font-size: 0.8em;
   padding: 14px 20px;
-  border: 1px solid white;
+  outline: 1px solid white;
   border-radius: 30px;
+}
+
+.contact-form_input:focus {
+  outline: 2px solid #db21cc;
 }
 
 #message {

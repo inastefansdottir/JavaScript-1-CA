@@ -27,6 +27,11 @@
   </head>
 
   <body>
+    <!-- Loading Indicator Container -->
+    <div id="loadingIndicator" class="loading-indicator" style="display: none">
+      <div class="spinner"></div>
+    </div>
+
     <header>
       <div class="menu">
         <input type="checkbox" id="menu-checkbox" />
@@ -197,9 +202,18 @@
       </div>
 
       <section class="text-section">
-        <div class="tags_section">
-          <p class="tags"></p>
+        <div class="tags-container">
+          <div class="tags_section">
+            <p class="tags" id="genre"></p>
+          </div>
+          <div class="tags_section">
+            <p class="tags" id="ageRating"></p>
+          </div>
+          <div class="tags_section on-sale">
+            <p class="tags" id="onSale"></p>
+          </div>
         </div>
+
         <h1></h1>
 
         <div class="rating margin-bottom">
@@ -211,6 +225,7 @@
         </div>
 
         <p class="game-title_paragraph margin-bottom"></p>
+        <p class="margin-bottom" id="releaseDate"></p>
         <p class="price-styling margin-bottom"></p>
 
         <div class="button-area">

@@ -20,15 +20,24 @@ function setupGamePage(game) {
   // Update page content dynamically
   document.title = `GameHub | Games | ${game.title}`;
   document.querySelector(".text-section h1").textContent = game.title;
-  document.querySelector(".tags").textContent = game.genre;
+  document.getElementById("genre").textContent = game.genre;
+  document.getElementById("ageRating").textContent = game.ageRating;
   document.querySelector(".game-title_paragraph").textContent =
     game.description;
+  document.getElementById(
+    "releaseDate"
+  ).textContent = `Release date: ${game.released}`;
 
+  const onSaleTag = document.getElementById("onSale");
   const priceElement = document.querySelector(".price-styling");
+
   if (game.onSale) {
     priceElement.innerHTML = `<span style="margin-right: 5px;">$${game.discountedPrice}</span> <span style="text-decoration: line-through; opacity: 0.6;">$${game.price}</span>`;
+    onSaleTag.textContent = "On Sale";
   } else {
     priceElement.textContent = `$${game.price}`;
+    onSaleTag.textContent = ""; // Clear the 'On Sale' text
+    onSaleTag.classList.remove("tags");
   }
 
   // Update the game images
