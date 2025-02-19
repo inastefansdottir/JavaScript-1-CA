@@ -14,7 +14,7 @@ const renderGames = (games) => {
 
     const gameCover = document.createElement("a");
     gameCover.classList.add("game-cover");
-    gameCover.href = `/games/specific-game/?id=${game.id}`;
+    gameCover.href = `../games/specific-game/?id=${game.id}`;
 
     const gameImage = document.createElement("img");
     gameImage.src = game.image.url;

@@ -120,7 +120,7 @@ function updateCheckoutButton() {
     displayEmptyCartMessage(true);
   } else {
     checkoutButton.classList.remove("disabled");
-    checkoutButton.href = "/cart/checkout/";
+    checkoutButton.href = "../cart/checkout/";
     displayEmptyCartMessage(false);
   }
 }
