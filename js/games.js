@@ -81,9 +81,17 @@ const applyFiltersAndSorting = () => {
 
   // Sort by price
   if (priceSort === "lowToHigh") {
-    filteredGames.sort((a, b) => a.price - b.price);
+    filteredGames.sort((a, b) => {
+      const priceA = a.onSale ? a.discountedPrice : a.price;
+      const priceB = b.onSale ? b.discountedPrice : b.price;
+      return priceA - priceB;
+    });
   } else if (priceSort === "highToLow") {
-    filteredGames.sort((a, b) => b.price - a.price);
+    filteredGames.sort((a, b) => {
+      const priceA = a.onSale ? a.discountedPrice : a.price;
+      const priceB = b.onSale ? b.discountedPrice : b.price;
+      return priceB - priceA;
+    });
   }
 
   renderGames(filteredGames);
