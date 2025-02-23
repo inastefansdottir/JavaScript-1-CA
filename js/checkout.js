@@ -51,7 +51,7 @@ function handleFormSubmit(event) {
   // Perform actual data processing here
   collectFormData(); // Collect data from the form
 
-  // Simulate processing or replace with actual asynchronous call
+  // Simulate processing
   setTimeout(() => {
     cart.clear(); // Clear the cart after processing
     hideLoadingIndicator(); // Hide the loading indicator

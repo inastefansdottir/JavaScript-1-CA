@@ -142,11 +142,11 @@
 }
 
 .empty-cart {
-  display: flex;
   flex-direction: column;
   align-items: center;
   margin: 0 auto;
   color: #db21cc;
+  text-align: center;
 }
 
 .fa-face-frown {

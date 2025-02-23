@@ -188,10 +188,6 @@ button {
   font-weight: 400;
 }
 
-.nav-links a:hover {
-  color: #801889;
-}
-
 .nav-links a:active {
   color: #db21cc;
 }
@@ -279,9 +275,6 @@ button {
   cursor: pointer; /* cursor changes to a pointer */
 }
 
-.button:hover {
-  background: linear-gradient(45deg, #801889 0%, #130a7d 100%);
-}
 .accent {
   background-color: #801889;
 }
@@ -324,6 +317,17 @@ footer {
 
 .copyright {
   font-size: 0.9em;
+}
+
+/* hover states */
+@media (hover: hover) {
+  .nav-links a:hover {
+    color: #801889;
+  }
+
+  .button:hover {
+    background: linear-gradient(45deg, #801889 0%, #130a7d 100%);
+  }
 }
 
 /* shared colors */

@@ -1,20 +1,6 @@
 import { fetchGameById } from "./api.js";
 import { cart, updateCartIcon, showCartPopup } from "./cart.js";
 
-// Get game ID from URL
-const params = new URLSearchParams(window.location.search); // Get the query string from the current window's URL (http://example.com/page?gameId=1234)
-const gameId = params.get("id"); // Retrieve the "id" parameter from the URL's query string (the id will be "1234")
-
-// Fetch specific game details
-fetchGameById(gameId)
-  .then((data) => {
-    const game = data.data; // Access the game data from the fetch result
-    setupGamePage(game); // Set up the page with the fetched game details
-  })
-  .catch((error) => {
-    console.error("Error fetching game data:", error);
-  });
-
 // Set up the game page with fetched data
 function setupGamePage(game) {
   // Update page content dynamically
@@ -86,4 +72,23 @@ function setupAddToCartButton(game) {
     updateCartIcon();
     showCartPopup(game);
   });
+}
+
+// Fetch specific game details
+async function fetchGameSetupPage(gameId) {
+  try {
+    const data = await fetchGameById(gameId);
+    const game = data.data; // Access the game data from the fetch result
+    setupGamePage(game); // Set up the page with the fetched game details
+  } catch (error) {
+    console.error("Error fetching game data:", error);
+  }
+}
+
+// Get game ID from URL
+const params = new URLSearchParams(window.location.search); // Get the query string from the current window's URL (http://example.com/page?gameId=1234)
+const gameId = params.get("id"); // Retrieve the "id" parameter from the URL's query string (the id will be "1234")
+
+if (gameId) {
+  fetchGameSetupPage(gameId);
 }
