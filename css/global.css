@@ -157,7 +157,7 @@ button {
   display: none;
 }
 
-.navigation {
+.navigation-wrapper {
   position: relative;
   background-color: transparent;
   z-index: 5; /* makes sure its on top of the hero picture and dark overlay */
@@ -169,6 +169,10 @@ button {
   margin: 0 auto;
   padding: 10px 0 0 0;
   position: relative;
+}
+
+.navigation-wrapper {
+  align-items: center;
 }
 
 .logo img {
