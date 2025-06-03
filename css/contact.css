@@ -3,8 +3,8 @@
   display: flex;
   gap: 100px;
   max-width: 1600px;
-  width: calc(100% - 400px);
-  margin: 0 auto;
+  width: var(--large-screen-width);
+  margin: var(--centering);
   align-items: center;
   justify-content: center;
 }
@@ -34,7 +34,7 @@
   );
   border: 1px solid rgba(255, 255, 255, 0.3);
   padding: 30px 50px 50px 50px;
-  border-radius: 30px;
+  border-radius: var(--border-radius-big);
 }
 
 .contact-form h2 {
@@ -63,20 +63,20 @@ input,
 
 .contact-form_input {
   background-color: transparent;
-  color: #ffffff;
+  color: white;
   width: 400px;
-  font-weight: 400;
+  font-weight: var(--font-regular);
   font-size: 0.8em;
   padding: 14px 20px;
   outline: 1px solid white;
-  border-radius: 30px;
+  border-radius: var(--border-radius-big);
 }
 
 .contact-form_input:focus {
-  outline: 2px solid #db21cc;
+  outline: 2px solid var(--pink);
 }
 
 #message {
-  border-radius: 20px;
+  border-radius: var(--border-radius-medium);
   font-size: 1.2em;
 }

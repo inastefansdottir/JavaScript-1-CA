@@ -2,7 +2,7 @@
 @media (max-width: 1300px) {
   .contact-main {
     max-width: 1000px;
-    width: calc(100% - 100px);
+    width: var(--smaller-screen-width);
   }
 }
 
@@ -43,7 +43,7 @@
 
   .contact-form_input {
     width: 280px;
-    font-weight: 400;
+    font-weight: var(--font-regular);
     padding: 10px 15px;
   }
 }

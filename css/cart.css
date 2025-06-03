@@ -2,8 +2,8 @@
   display: flex;
   justify-content: space-between;
   max-width: 1600px;
-  width: calc(100% - 400px);
-  margin: 0 auto;
+  width: var(--large-screen-width);
+  margin: var(--centering);
   margin-top: 100px;
   gap: 50px;
 }
@@ -64,7 +64,7 @@
 /* CSS Grids content */
 .text-style {
   font-size: 0.7em;
-  font-weight: 300;
+  font-weight: var(--font-light);
   color: rgba(225, 225, 225, 0.8);
 }
 
@@ -79,7 +79,7 @@
   width: 100px;
   height: 90px;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: var(--border-radius-small);
 }
 
 .center-align {
@@ -87,12 +87,12 @@
 }
 
 .bold-text-style {
-  font-weight: 400;
+  font-weight: var(--font-regular);
 }
 
 .counter {
   padding: 5px 10px;
-  border-radius: 30px;
+  border-radius: var(--border-radius-big);
   display: flex;
   gap: 15px;
   align-items: center;
@@ -114,20 +114,20 @@
   width: 30px;
   height: 30px;
   align-content: center;
-  border-radius: 50%;
+  border-radius: var(--default-radius);
   justify-self: end;
   font-size: 12px;
   cursor: pointer;
 }
 
 .ex:hover {
-  background-color: #801889;
-  border-color: #801889;
+  background-color: var(--dark-pink);
+  border-color: var(--dark-pink);
 }
 
 .ex:active {
-  background-color: #db21cc;
-  border-color: #db21cc;
+  background-color: var(--pink);
+  border-color: var(--pink);
 }
 
 .counter,
@@ -144,8 +144,8 @@
 .empty-cart {
   flex-direction: column;
   align-items: center;
-  margin: 0 auto;
-  color: #db21cc;
+  margin: var(--centering);
+  color: var(--pink);
   text-align: center;
 }
 
@@ -159,7 +159,7 @@
 }
 
 .disabled {
-  background-color: #801889;
+  background-color: var(--dark-pink);
   cursor: not-allowed;
 }
 
@@ -170,19 +170,19 @@
   flex-direction: column;
   padding: 30px;
   gap: 35px;
-  border-radius: 30px;
+  border-radius: var(--border-radius-big);
 }
 
 .order-summary h1 {
   font-size: 1.5em;
-  font-weight: 500;
+  font-weight: var(--font-medium);
 }
 
 .order-summary_text {
   display: flex;
   justify-content: space-between;
   font-size: 0.9em;
-  font-weight: 400;
+  font-weight: var(--font-regular);
 }
 
 .faded-text {

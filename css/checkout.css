@@ -3,8 +3,8 @@
   display: flex;
   flex-direction: column;
   max-width: 1600px;
-  width: calc(100% - 400px);
-  margin: 0 auto;
+  width: var(--large-screen-width);
+  margin: var(--centering);
   margin-top: 50px;
 }
 
@@ -36,18 +36,18 @@
 
 .flexbox-styling h2 {
   margin: 10px 0px;
-  font-weight: 400;
+  font-weight: var(--font-regular);
 }
 
 .type-area-styling {
   background-color: transparent;
-  color: #ffffff;
+  color: white;
   width: 100%;
-  font-weight: 400;
+  font-weight: var(--font-regular);
   font-size: 14px;
   padding: 14px 20px;
   border: 1px solid white;
-  border-radius: 30px;
+  border-radius: var(--border-radius-big);
 }
 
 .width-space {
@@ -86,7 +86,7 @@
 
 /* CSS Grids content */
 .purchase {
-  font-weight: 300;
+  font-weight: var(--font-light);
   margin-bottom: 10px;
 }
 
@@ -100,7 +100,7 @@
   width: 120px;
   height: 110px;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: var(--border-radius-small);
 }
 
 .center-align {
@@ -108,7 +108,7 @@
 }
 
 .bold-text-style {
-  font-weight: 400;
+  font-weight: var(--font-regular);
 }
 
 .ex {
@@ -116,19 +116,19 @@
   height: 30px;
   align-content: center;
   text-align: center;
-  border-radius: 50%;
+  border-radius: var(--default-radius);
   justify-self: end;
   font-size: 12px;
 }
 
 .ex:hover {
-  background-color: #801889;
-  border-color: #801889;
+  background-color: var(--dark-pink);
+  border-color: var(--dark-pink);
 }
 
 .ex:active {
-  background-color: #db21cc;
-  border-color: #db21cc;
+  background-color: var(--pink);
+  border-color: var(--pink);
 }
 
 .ex,
@@ -149,19 +149,19 @@
   padding: 30px;
   margin-top: 40px;
   gap: 35px;
-  border-radius: 30px;
+  border-radius: var(--border-radius-big);
 }
 
 .order-summary h3 {
   font-size: 1.5em;
-  font-weight: 500;
+  font-weight: var(--font-medium);
 }
 
 .order-summary_text {
   display: flex;
   justify-content: space-between;
   font-size: 0.9em;
-  font-weight: 400;
+  font-weight: var(--font-regular);
 }
 
 .faded-text {
@@ -186,7 +186,7 @@
   text-align: center;
   margin-top: 50px;
   gap: 20px;
-  color: #db21cc;
+  color: var(--pink);
 }
 
 .fa-circle-check {
@@ -195,13 +195,13 @@
 
 .purchase-complete-section h1 {
   font-size: 36px;
-  font-weight: 500;
+  font-weight: var(--font-medium);
 }
 
 .purchase-complete-section p {
   font-size: 24px;
-  font-weight: 300;
-  color: #db21cc;
+  font-weight: var(--font-light);
+  color: var(--pink);
   width: 300px;
   margin: auto;
 }

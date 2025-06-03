@@ -35,7 +35,7 @@
 
 .hero-text p {
   font-size: 20px;
-  font-weight: 300;
+  font-weight: var(--font-light);
   width: 500px;
   margin-bottom: 20px;
 }
@@ -47,13 +47,13 @@
   align-items: center;
   gap: 50px;
   max-width: 1600px;
-  width: calc(100% - 400px);
-  margin: 0 auto;
+  width: var(--large-screen-width);
+  margin: var(--centering);
   padding: 100px 0;
 }
 
 .best-sellers_text {
-  font-weight: 400;
+  font-weight: var(--font-regular);
   font-size: 36px;
 }
 
@@ -67,7 +67,7 @@
   overflow: hidden;
   height: 320px;
   width: 320px;
-  border-radius: 20px;
+  border-radius: var(--border-radius-medium);
   transition: transform 0.3s ease;
 }
 
@@ -75,7 +75,7 @@
   width: 320px;
   height: 320px;
   object-fit: cover;
-  border-radius: 20px;
+  border-radius: var(--border-radius-medium);
 }
 
 /* Hover effect container */
@@ -120,7 +120,7 @@
   display: flex;
   flex-direction: column;
   text-align: center;
-  border-radius: 30px;
+  border-radius: var(--border-radius-big);
   padding: 50px;
   margin: 5% auto;
   width: fit-content;
@@ -132,8 +132,8 @@
 .newsletter-section h3 {
   margin-bottom: 20px;
   font-size: 2em;
-  font-weight: 500;
-  color: #db21cc;
+  font-weight: var(--font-medium);
+  color: var(--pink);
 }
 
 .newsletter-section_type {
@@ -144,15 +144,15 @@
 
 #email {
   width: 400px;
-  font-weight: 400;
+  font-weight: var(--font-regular);
   font-size: 0.8em;
   padding: 14px 20px;
   border: none;
-  border-radius: 30px;
+  border-radius: var(--border-radius-big);
 }
 
 #email:focus {
-  outline: 2px solid #db21cc;
+  outline: 2px solid var(--pink);
 }
 
 .faded-text {

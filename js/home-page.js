@@ -38,12 +38,12 @@ const createGameCard = (game) => {
   title.textContent = game.title;
 
   const price = document.createElement("p");
-  price.style.fontWeight = "300";
+  price.style.fontWeight = "var(--font-light)";
   if (game.onSale) {
     const originalPrice = document.createElement("span");
     originalPrice.textContent = `$${game.price}`;
     originalPrice.style.textDecoration = "line-through";
-    originalPrice.style.color = "#db21cc";
+    originalPrice.style.color = "var(--pink)";
 
     const discountedPrice = document.createElement("span");
     discountedPrice.textContent = `$${game.discountedPrice}`;

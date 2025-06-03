@@ -1,31 +1,31 @@
 .about-main {
-    display: flex;
-    max-width: 100%;
-    align-items: center;
-    margin: 50px 5%;
-    justify-content: center;
-    gap: 150px;
+  display: flex;
+  max-width: 100%;
+  align-items: center;
+  margin: 50px 5%;
+  justify-content: center;
+  gap: 150px;
 }
 
 .about-main h1 {
-    font-size: 2em;
-    font-weight: 500;
-    position: relative;
+  font-size: 2em;
+  font-weight: var(--font-medium);
+  position: relative;
 }
 
 .about-main h2 {
-    font-size: 6em;
+  font-size: 6em;
 }
 
 .about-main p {
-    font-size: 1.2em;
-    width: 340px;
-    margin-top: 10px;
+  font-size: 1.2em;
+  width: 340px;
+  margin-top: 10px;
 }
 
 .about-main img {
-    height: 25vw;
-    width: 25vw;
-    object-fit: cover;
-    border-radius: 50%;
+  height: 25vw;
+  width: 25vw;
+  object-fit: cover;
+  border-radius: var(--default-radius);
 }

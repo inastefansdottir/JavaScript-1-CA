@@ -13,7 +13,7 @@
 @media (max-width: 1300px) {
   .cart-main {
     max-width: 1000px;
-    width: calc(100% - 100px);
+    width: var(--smaller-screen-width);
   }
 }
 

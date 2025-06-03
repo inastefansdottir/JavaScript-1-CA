@@ -16,7 +16,7 @@
   .games-header,
   .product-list {
     max-width: 1000px;
-    width: calc(100% - 100px);
+    width: var(--smaller-screen-width);
   }
 
   /* specific game page media*/

@@ -2,8 +2,8 @@
 .games-header,
 .product-list {
   max-width: 1600px;
-  width: calc(100% - 400px);
-  margin: 0 auto;
+  width: var(--large-screen-width);
+  margin: var(--centering);
 }
 
 .games-main h1 {
@@ -25,12 +25,12 @@
 
 .filters-styling {
   font-family: "alexandria", Helvetica, sans-serif, arial;
-  font-weight: 400;
+  font-weight: var(--font-regular);
   font-size: 14px;
-  background-color: #db21cc;
-  color: #ffffff;
+  background-color: var(--pink);
+  color: white;
   padding: 8px 10px;
-  border-radius: 30px;
+  border-radius: var(--border-radius-big);
 }
 
 /* Products */
@@ -52,7 +52,7 @@
 }
 
 .products img {
-  border-radius: 30px;
+  border-radius: var(--border-radius-big);
   width: 100%;
   object-fit: cover;
   margin-top: 30px;
@@ -108,7 +108,7 @@ legend {
   width: 120px;
   height: 125px;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: var(--border-radius-small);
   cursor: pointer;
   opacity: 0.5; /* 50% opacity */
   transition: opacity 0.3s ease-in-out; /* smooth transition over 0.3 seconds */
@@ -134,7 +134,7 @@ legend {
   width: 600px;
   height: 630px;
   object-fit: cover;
-  border-radius: 30px;
+  border-radius: var(--border-radius-big);
 }
 
 /* show the slide when the correct radio button is checked */
@@ -169,7 +169,7 @@ input[type="radio"] {
 
 .prev:hover,
 .next:hover {
-  color: #801889;
+  color: var(--dark-pink);
 }
 
 /* show/hide arrows based on the checked state */
@@ -195,7 +195,7 @@ input[type="radio"] {
 
 .text-section h1 {
   font-size: 2.5em;
-  font-weight: 500;
+  font-weight: var(--font-medium);
   max-width: 300px;
   margin-bottom: 5px;
 }
@@ -213,7 +213,7 @@ input[type="radio"] {
 .tags {
   font-size: 0.7em;
   padding: 2px 7px;
-  border-radius: 20px;
+  border-radius: var(--border-radius-medium);
 }
 
 .rating {
@@ -231,11 +231,11 @@ input[type="radio"] {
 
 .price-styling {
   font-size: 1.3em;
-  font-weight: 400;
+  font-weight: var(--font-regular);
 }
 .counter {
   padding: 10px 15px;
-  border-radius: 30px;
+  border-radius: var(--border-radius-big);
   display: flex;
   gap: 20px;
   width: fit-content;
@@ -243,7 +243,7 @@ input[type="radio"] {
 }
 
 .bold-text-style {
-  font-weight: 400;
+  font-weight: var(--font-regular);
   font-size: 1em;
 }
 
