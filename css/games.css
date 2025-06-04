@@ -25,12 +25,16 @@
 
 .filters-styling {
   font-family: "alexandria", Helvetica, sans-serif, arial;
-  font-weight: var(--font-regular);
-  font-size: 14px;
+  appearance: none;
   background-color: var(--pink);
+  background-image: url(../assets/images/down.svg);
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  background-size: 16px;
   color: white;
   padding: 8px 10px;
   border-radius: var(--border-radius-big);
+  width: 140px;
 }
 
 /* Products */
@@ -53,7 +57,7 @@
 
 .products img {
   border-radius: var(--border-radius-big);
-  width: 100%;
+  width: var(--scalable-width);
   object-fit: cover;
   margin-top: 30px;
   margin-bottom: 10px;

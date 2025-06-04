@@ -1,12 +1,12 @@
 /* contact section */
 .contact-main {
   display: flex;
-  gap: 100px;
   max-width: 1600px;
   width: var(--large-screen-width);
   margin: var(--centering);
+  margin-top: 100px;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .contact-section {
@@ -48,7 +48,7 @@
 .contact-form_content {
   display: flex;
   flex-direction: column;
-  margin-bottom: 7px;
+  margin-bottom: 15px;
 }
 
 .contact-form_text {

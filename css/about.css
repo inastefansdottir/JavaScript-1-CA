@@ -1,6 +1,5 @@
 .about-main {
   display: flex;
-  max-width: 100%;
   align-items: center;
   margin: 50px 5%;
   justify-content: center;
@@ -27,5 +26,5 @@
   height: 25vw;
   width: 25vw;
   object-fit: cover;
-  border-radius: var(--default-radius);
+  border-radius: 50%;
 }

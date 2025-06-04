@@ -98,6 +98,8 @@
 
   .product-list {
     grid-template-columns: repeat(1, minmax(0, 1fr));
+    width: var(--mobile-screen-width);
+    max-width: 400px;
   }
 
   .products h2 {

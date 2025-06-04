@@ -48,6 +48,9 @@
     flex-direction: column;
     gap: 60px;
     justify-content: flex-start;
+    width: var(--mobile-screen-width);
+    max-width: 400px;
+    margin: var(--centering);
     margin-top: 50px;
   }
 
@@ -62,6 +65,7 @@
 
   .about-main p {
     font-size: 1em;
+    width: inherit;
   }
 
   .text-section {

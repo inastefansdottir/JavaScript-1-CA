@@ -41,6 +41,10 @@
     align-items: center;
   }
 
+  .main-checkout {
+    width: var(--mobile-screen-width);
+  }
+
   .main-checkout h1 {
     font-size: 30px;
     text-align: center;

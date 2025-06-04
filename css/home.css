@@ -6,15 +6,15 @@
   background-position: center; /* centers the image */
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: var(--scalable-width);
   position: relative; /* keeps the section in normal flow */
 }
 
 .hero-section::before {
   content: ""; /* necessary for pseudo-elements */
   position: absolute; /* position it on top */
-  width: 100%;
-  height: 100%;
+  width: var(--scalable-width);
+  height: var(--scalable-height);
   background-color: rgba(0, 0, 0, 0.5); /* 50% black */
   z-index: 1;
 }
@@ -122,7 +122,7 @@
   text-align: center;
   border-radius: var(--border-radius-big);
   padding: 50px;
-  margin: 5% auto;
+  margin: var(--centering);
   width: fit-content;
   border: 1px solid rgba(255, 255, 255, 0.2);
   position: relative;

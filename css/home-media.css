@@ -40,12 +40,16 @@
   }
 
   .hero-text p {
-    width: 350px;
     font-size: 14px;
+    width: var(--scalable-width);
   }
 
   .hero-text {
-    margin: 200px 0;
+    max-width: 350px;
+    margin: var(--centering);
+    margin-top: 200px;
+    margin-bottom: 200px;
+    width: var(--mobile-screen-width);
   }
 
   /* best sellers */
@@ -63,18 +67,24 @@
 
 @media (max-width: 700px) {
   /* Best sellers section */
+  .best-sellers {
+    width: var(--mobile-screen-width);
+    max-width: 320px;
+  }
+
   .best-sellers_games {
     display: flex;
     flex-direction: column;
+    width: var(--scalable-width);
   }
 
   .game-card {
     height: 320px;
-    width: 320px;
+    width: var(--scalable-width);
   }
 
   .game-card_image {
-    width: 320px;
+    width: var(--scalable-width);
     height: 320px;
   }
 

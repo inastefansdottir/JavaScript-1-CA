@@ -52,14 +52,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: var(--centering);
     padding: 15px 30px;
   }
 
   .hamburger-icon {
     position: relative;
     z-index: 100;
-    font-size: 35px;
+    font-size: 30px;
   }
 
   .navigation {
@@ -82,7 +81,7 @@
 
   .navigation-wrapper {
     margin: 0;
-    width: 100%;
+    width: var(--scalable-width);
   }
 
   .nav-links li {
@@ -122,5 +121,7 @@
   footer {
     flex-direction: column;
     gap: 20px;
+    text-align: center;
+    width: var(--mobile-screen-width);
   }
 }
