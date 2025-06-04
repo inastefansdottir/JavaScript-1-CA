@@ -13,7 +13,7 @@
 @media (max-width: 1300px) {
   .cart-main {
     max-width: 1000px;
-    width: var(--smaller-screen-width);
+    width: calc(100% - 100px);
   }
 }
 
@@ -54,10 +54,19 @@
 
   .order-summary {
     width: 390px;
+    padding: 40px;
   }
 }
 
 @media (max-width: 450px) {
+  .fa-face-frown {
+    font-size: 100px;
+  }
+
+  .empty-cart h2 {
+    font-size: 28px;
+  }
+
   .static-header,
   .dynamic {
     grid-template-columns: 80px 80px 40px 80px 45px 30px;

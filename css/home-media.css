@@ -66,9 +66,38 @@
 }
 
 @media (max-width: 700px) {
-  /* Best sellers section */
-  .best-sellers {
+  .best-sellers,
+  .newsletter-section {
     width: var(--mobile-screen-width);
+  }
+
+  .best-sellers_games {
+    gap: 20px;
+  }
+
+  /* newsletter section */
+  .newsletter-section {
+    margin: 10% auto;
+    max-width: 450px;
+    padding: 40px;
+  }
+
+  .newsletter-section h3 {
+    font-size: 1.8em;
+  }
+
+  .newsletter-section_type {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #email {
+    width: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .best-sellers {
     max-width: 320px;
   }
 
@@ -86,32 +115,5 @@
   .game-card_image {
     width: var(--scalable-width);
     height: 320px;
-  }
-
-  .slider-control.left {
-    left: 10px;
-  }
-
-  .slider-control.right {
-    right: 10px;
-  }
-
-  /* newsletter section */
-  .newsletter-section {
-    margin: 10% auto;
-    width: 85vw;
-  }
-
-  .newsletter-section h3 {
-    font-size: 1.8em;
-  }
-
-  .newsletter-section_type {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  #email {
-    width: 250px;
   }
 }

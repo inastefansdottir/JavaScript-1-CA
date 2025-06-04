@@ -145,7 +145,7 @@
   flex-direction: column;
   align-items: center;
   margin: var(--centering);
-  color: var(--pink);
+  color: var(--dark-pink);
   text-align: center;
 }
 
@@ -168,7 +168,7 @@
   display: flex;
   width: 440px;
   flex-direction: column;
-  padding: 30px;
+  padding: 50px;
   gap: 35px;
   border-radius: var(--border-radius-big);
 }

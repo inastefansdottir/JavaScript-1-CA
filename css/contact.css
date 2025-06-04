@@ -80,3 +80,7 @@ input,
   border-radius: var(--border-radius-medium);
   font-size: 1.2em;
 }
+
+.bold-text {
+  font-weight: var(--font-semibold);
+}
