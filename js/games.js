@@ -8,28 +8,36 @@ const renderGames = (games) => {
   const productList = document.querySelector(".product-list"); // The container for the games
   productList.innerHTML = ""; // Clear any existing content
 
+  // Loop through each game and create its HTML structure
   games.forEach((game) => {
+    // Create main game container
     const productDiv = document.createElement("div");
     productDiv.classList.add("products");
 
+    // Create clickable image that links to the game detail page
     const gameCover = document.createElement("a");
     gameCover.classList.add("game-cover");
     gameCover.href = `../games/specific-game/?id=${game.id}`;
 
+    // Game image
     const gameImage = document.createElement("img");
     gameImage.src = game.image.url;
     gameImage.alt = game.image.alt;
 
+    // Game title
     const gameTitle = document.createElement("h2");
     gameTitle.textContent = game.title;
 
+    // Game price
     const gamePrice = document.createElement("p");
     if (game.onSale) {
+      // Show original price with a strikethrough
       const originalPrice = document.createElement("span");
       originalPrice.textContent = `$${game.price}`;
       originalPrice.style.textDecoration = "line-through";
       originalPrice.style.opacity = "0.6";
 
+      // Show discounted price
       const discountedPrice = document.createElement("span");
       discountedPrice.textContent = `$${game.discountedPrice}`;
       discountedPrice.style.marginLeft = "10px";
@@ -37,9 +45,11 @@ const renderGames = (games) => {
       gamePrice.appendChild(originalPrice);
       gamePrice.appendChild(discountedPrice);
     } else {
+      // Show regular price
       gamePrice.textContent = `$${game.price}`;
     }
 
+    // "Add to cart" button
     const addToCartButton = document.createElement("button");
     addToCartButton.classList.add("button", "small-button");
     addToCartButton.textContent = "Add to cart";

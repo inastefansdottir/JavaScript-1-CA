@@ -205,3 +205,15 @@
   width: 300px;
   margin: auto;
 }
+
+/* Error messages */
+input.error {
+  border: 1px solid var(--pink);
+}
+
+.form-error-message {
+  color: var(--pink);
+  font-size: 0.8rem;
+  text-align: right;
+  font-weight: var(--font-medium);
+}

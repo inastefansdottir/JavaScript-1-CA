@@ -87,7 +87,9 @@
 .specififc-game-main {
   display: flex;
   gap: 40px;
-  margin: 5% auto;
+  margin: var(--centering);
+  margin-top: 150px;
+  margin-bottom: 100px;
   height: 630px;
 }
 
