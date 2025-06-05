@@ -1,6 +1,6 @@
 # Your project title
 
-![image](https://user-images.githubusercontent.com/52622303/164316813-4b12d99f-aeb7-4069-85cf-e72b3a50ac99.png)
+![image](./assets/images/gamehub-logo.png)
 
 An interactive video game store website where users can browse games, filter by genre or price, view detailed information, and simulate purchases using a cart and checkout form.
 
