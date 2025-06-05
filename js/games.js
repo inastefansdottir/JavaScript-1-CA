@@ -53,6 +53,7 @@ const renderGames = (games) => {
     const addToCartButton = document.createElement("button");
     addToCartButton.classList.add("button", "small-button");
     addToCartButton.textContent = "Add to cart";
+
     // Define an onclick event for the button that adds the game to the cart
     addToCartButton.onclick = () => {
       cart.addItem({
@@ -62,8 +63,8 @@ const renderGames = (games) => {
         image: game.image.url,
         quantity: 1, // default quantity is 1
       });
-      updateCartIcon();
-      showCartPopup(game);
+      updateCartIcon(); // Update number in cart icon
+      showCartPopup(game); // Show popup notification
     };
 
     // Append elements to the product card
@@ -85,6 +86,7 @@ const applyFiltersAndSorting = () => {
 
   // Filter by category
   let filteredGames = allGames;
+  // If a specific category is selected, filter the games by genre
   if (category !== "all") {
     filteredGames = filteredGames.filter((game) => game.genre === category);
   }
@@ -107,6 +109,7 @@ const applyFiltersAndSorting = () => {
   renderGames(filteredGames);
 };
 
+// Main function to fetch and display games on page load
 async function loadAndDisplayGames() {
   try {
     const data = await fetchAllGames(); // Wait for the fetch to complete
