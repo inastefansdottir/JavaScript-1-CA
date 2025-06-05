@@ -22,13 +22,13 @@ This repository contains the Gamehub website, originally designed as a static HT
 - **Checkout:** Allows users to checkout items and "complete a purchase".
 - **Filter Functionality:** Users can filter products based on categories and price, making navigation easier.
 - **Loading Animation:** A dotted loading indicator, sourced from cssloaders.github.io, enhances the UI during page or content loads.
-- **Responsive Design:** The website is optimized for both desktop and mobile viewing, ensuring accessibility on various devices.
+- **Responsive Design:** The website is optimized for desktop and mobile viewing, ensuring accessibility on various devices.
 
 ## Getting Started
 
 ### Installing
 
-Since this is a static frontend project, there are no dependencies or installations needed.
+Since this is a static frontend project, no dependencies or installations are needed.
 
 1. Clone the repo:
 
@@ -36,7 +36,7 @@ Since this is a static frontend project, there are no dependencies or installati
 git clone git@github.com:inastefansdottir/JavaScript-1-CA.git
 ```
 
-2. Navigate to the project folder and open index.html file in your browser.
+2. Navigate to the project folder and open the index.html file in your browser.
 
 Alternatively, use a live server extension (like Live Server in VS Code) to view the site.
 
@@ -48,9 +48,9 @@ Open index.html in your browser
 
 Or:
 
-Use Live Server in VS Code for live preview
+Use Live Server in VS Code for a live preview
 
-You can also view the liv deployed version here: https://inastefansdottir.github.io/JavaScript-1-CA
+You can also view the live deployed version here: https://inastefansdottir.github.io/JavaScript-1-CA
 
 ## Contributing
 
