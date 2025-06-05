@@ -1,4 +1,4 @@
-# Your project title
+# Game Hub
 
 ![image](./assets/images/gamehub-logo.png)
 
@@ -6,7 +6,7 @@ An interactive video game store website where users can browse games, filter by 
 
 ## Description
 
-This repository contains the Gamehub website, originally designed as a static HTML and CSS project and enhanced with JavaScript for dynamic user interactions as part of the JavaScript 1 course assignment. Inspired by popular gaming platforms like Gamivo and G2A, Gamehub aims to provide an engaging user experience with interactive features such as a product cart, filter options, and a checkout form.
+This repository contains the Game Hub website, originally designed as a static HTML and CSS project and enhanced with JavaScript for dynamic user interactions as part of the JavaScript 1 course assignment. Inspired by popular gaming platforms like Gamivo and G2A, Gamehub aims to provide an engaging user experience with interactive features such as a product cart, filter options, and a checkout form.
 
 ## Built With
 
