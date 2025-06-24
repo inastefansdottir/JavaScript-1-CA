@@ -1,7 +1,7 @@
 /* contact section */
 .contact-main {
   display: flex;
-  max-width: 1600px;
+  max-width: 1000px;
   width: var(--large-screen-width);
   margin: var(--centering);
   margin-top: 100px;
